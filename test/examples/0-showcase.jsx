@@ -16,7 +16,8 @@ type State = {|
   currentBreakpoint: string,
   compactType: CompactType,
   mounted: boolean,
-  layouts: {[string]: Layout}
+  layouts: {[string]: Layout},
+  disabledItems: {[string]: boolean}
 |};
 
 export default class ShowcaseLayout extends React.Component<Props, State> {
@@ -31,7 +32,8 @@ export default class ShowcaseLayout extends React.Component<Props, State> {
     currentBreakpoint: "lg",
     compactType: null,
     mounted: false,
-    layouts: { lg: generateLayout() }
+    layouts: { lg: generateLayout() },
+    disabledItems: {}
   };
 
   componentDidMount() {
@@ -39,6 +41,7 @@ export default class ShowcaseLayout extends React.Component<Props, State> {
   }
 
   generateDOM() {
+    const { disabledItems } = this.state;
     return _.map(this.state.layouts.lg, (l, i) => {
       const tail = l.gridLayoutId ? `${i} in grid ${l.gridLayoutId}`: i;
       return (
@@ -46,7 +49,7 @@ export default class ShowcaseLayout extends React.Component<Props, State> {
           {l.isGridLayout ? (
             <ResponsiveReactGridLayout
             name={i+""}
-            key={`g-${i}`}
+            key={`g-${i}`}  
             {...this.props}
 
             layout={[{i: 'c', x: 4, y: 0, w: 1, h: 2, gridLayoutId: i+""},{i: 'd', x: 6, y: 2, w: 1, h: 1, gridLayoutId: i+""}]}
@@ -58,9 +61,11 @@ export default class ShowcaseLayout extends React.Component<Props, State> {
             useCSSTransforms={this.state.mounted}
             compactType={this.state.compactType}
             preventCollision={!this.state.compactType}
+            activateDrag={this.onActivateDrag(i+"")}
+            deactivateDrag={this.onDeactivateDrag(i+"")}
           >
-            <div key="c"> <span className="text" >item-{tail}</span> </div>
-            <div key="d"> <span className="text" >item-{tail}</span> </div>
+            <div key="c"> <span className="text" >item-c-{tail}</span> </div>
+            <div key="d"> <span className="text" >item-d-{tail}</span> </div>
           </ResponsiveReactGridLayout>
           ) : (
             <span className="text">{tail}</span>
@@ -68,6 +73,18 @@ export default class ShowcaseLayout extends React.Component<Props, State> {
         </div>
       );
     });
+  }
+
+  onActivateDrag = (i) => () =>{
+    const newLayouts = this.state.layouts.lg.map(l => ({...l, isDraggable: l.i === i ? true : l.isDraggable}));
+    console.log('act', i, newLayouts)
+    this.setState({ layouts: {lg: newLayouts }});
+  }
+
+  onDeactivateDrag = (i) => () =>{
+    const newLayouts = this.state.layouts.lg.map(l => ({...l, isDraggable: l.i === i ? false : l.isDraggable}));
+    console.log('deact', i, newLayouts)
+    this.setState({ layouts: {lg: newLayouts }});
   }
 
   onBreakpointChange = (breakpoint: string) => {
@@ -141,7 +158,7 @@ export default class ShowcaseLayout extends React.Component<Props, State> {
 }
 
 function generateLayout() {
-  return _.map(_.range(0, 3), function(item, i) {
+  return _.map(_.range(0, 10), function(item, i) {
     var y = Math.ceil(Math.random() * 4) + 1;
     return {
       x: Math.round(Math.random() * 5) * 2,
@@ -149,7 +166,8 @@ function generateLayout() {
       w: 2,
       h: y,
       i: i.toString(),
-      isGridLayout: Math.random() < 0.2
+      isGridLayout: Math.random() < 0.2,
+      isDraggable: true
     };
   });
 }

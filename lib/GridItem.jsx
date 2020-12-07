@@ -33,6 +33,7 @@ import type { ResizeHandles, ResizeHandle } from "./ReactGridLayoutPropTypes";
 import WidthProvider from "./components/WidthProvider";
 import ReactGridLayout from "./ReactGridLayout";
 import ResponsiveReactGridLayout from "./ResponsiveReactGridLayout";
+import { times } from "lodash";
 
 type PartialPosition = { top: number, left: number };
 type GridItemCallback<Data: GridDragEvent | GridResizeEvent> = (
@@ -92,7 +93,9 @@ type Props = {
   onDragStop?: GridItemCallback<GridDragEvent>,
   onResize?: GridItemCallback<GridResizeEvent>,
   onResizeStart?: GridItemCallback<GridResizeEvent>,
-  onResizeStop?: GridItemCallback<GridResizeEvent>
+  onResizeStop?: GridItemCallback<GridResizeEvent>,
+  activateDrag?: () => void,
+  deactivateDrag?: () => void
 };
 
 /**
@@ -156,12 +159,16 @@ export default class GridItem extends React.Component<Props, State> {
     resizeHandle: resizeHandleType,
 
     // Functions
+    onMouseOver: PropTypes.func,
+    onMouseLeave: PropTypes.func,
     onDragStop: PropTypes.func,
     onDragStart: PropTypes.func,
     onDrag: PropTypes.func,
     onResizeStop: PropTypes.func,
     onResizeStart: PropTypes.func,
     onResize: PropTypes.func,
+    activateDrag: PropTypes.func,
+    deactivateDrag: PropTypes.func,
 
     // Flags
     isDraggable: PropTypes.bool.isRequired,
@@ -600,6 +607,18 @@ export default class GridItem extends React.Component<Props, State> {
 
     handler.call(this, i, w, h, { e, node, size });
   }
+  onMouseOver = e => {
+    const { deactivateDrag } = this.props;
+    if (!this.props.isGridLayout && deactivateDrag) {
+      deactivateDrag();
+    }
+  };
+  onMouseLeave = e => {
+    const { activateDrag } = this.props;
+    if (!this.props.isGridLayout && activateDrag) {
+      activateDrag();
+    }
+  };
 
   render(): ReactNode {
     const {
@@ -644,7 +663,9 @@ export default class GridItem extends React.Component<Props, State> {
         ...child.props.style,
         ...this.createStyle(pos),
         zIndex: this.props.gridLayoutId ? 1 : "auto"
-      }
+      },
+      onMouseOver: this.onMouseOver,
+      onMouseLeave: this.onMouseLeave
     });
 
     // Resizable support. This is usually on but the user can toggle it off.

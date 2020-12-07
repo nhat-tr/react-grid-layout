@@ -171,14 +171,12 @@ export default class ReactGridLayout extends React.Component<Props, State> {
       !isEqual(nextProps.layout, prevState.propsLayout) ||
       nextProps.compactType !== prevState.compactType
     ) {
-      console.log("first", nextProps.layout);
       newLayoutBase = nextProps.layout;
     } else if (!childrenEqual(nextProps.children, prevState.children)) {
       // If children change, also regenerate the layout. Use our state
       // as the base in case because it may be more up to date than
       // what is in props.
       newLayoutBase = prevState.layout;
-      console.log("second", nextProps.layout);
     }
 
     // We need to regenerate the layout.
@@ -345,6 +343,7 @@ export default class ReactGridLayout extends React.Component<Props, State> {
     // Set state
     const newLayout = compact(layout, compactType(this.props), cols);
     const containerLayout = getContainerGridLayout(layout, l);
+    console.log("stop", l, newLayout, containerLayout);
 
     const { oldLayout, removedLayout } = this.state;
     this.setState({
@@ -526,10 +525,8 @@ export default class ReactGridLayout extends React.Component<Props, State> {
     if (!child || !child.key) return;
     const l = getLayoutItem(this.state.layout, String(child.key));
     if (!l || this.state.removedLayout.findIndex(x => x.i === l.i) !== -1) {
-      // console.log("notfound", l.i, this.state.removedLayout, this.state.layout);
       return null;
     }
-    // console.log("RENDER", l.i, this.state.removedLayout, this.state.layout);
     const {
       width,
       cols,
@@ -627,6 +624,8 @@ export default class ReactGridLayout extends React.Component<Props, State> {
         droppingPosition={isDroppingItem ? droppingPosition : undefined}
         resizeHandles={resizeHandlesOptions}
         resizeHandle={resizeHandle}
+        activateDrag={this.props.activateDrag}
+        deactivateDrag={this.props.deactivateDrag}
       >
         {newChild || child}
       </GridItem>

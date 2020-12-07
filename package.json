@@ -9,7 +9,7 @@
     "build": "make build",
     "build-example": "make build-example",
     "view-example": "make view-example",
-    "dev": "make dev",
+    "dev": "webpack-dev-server --config webpack-dev-server.config.js \t  --hot --progress --colors",
     "prepublishOnly": "make build",
     "validate": "npm ls",
     "flow": "flow"
