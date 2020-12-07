@@ -15,7 +15,8 @@ import {
   getAllCollisions,
   compactType,
   noop,
-  fastRGLPropsEqual
+  fastRGLPropsEqual,
+  getContainerGridLayout
 } from "./utils";
 
 import { calcXY } from "./calculateUtils";
@@ -43,6 +44,7 @@ import type { PositionParams } from "./calculateUtils";
 type State = {
   activeDrag: ?LayoutItem,
   layout: Layout,
+  removedLayout: Layout,
   mounted: boolean,
   oldDragItem: ?LayoutItem,
   oldLayout: ?Layout,
@@ -56,6 +58,7 @@ type State = {
 };
 
 import type { Props } from "./ReactGridLayoutPropTypes";
+import { has } from "lodash";
 
 // End Types
 
@@ -125,6 +128,7 @@ export default class ReactGridLayout extends React.Component<Props, State> {
       // Legacy support for verticalCompact: false
       compactType(this.props)
     ),
+    removedLayout: [],
     mounted: false,
     oldDragItem: null,
     oldLayout: null,
@@ -167,12 +171,14 @@ export default class ReactGridLayout extends React.Component<Props, State> {
       !isEqual(nextProps.layout, prevState.propsLayout) ||
       nextProps.compactType !== prevState.compactType
     ) {
+      console.log("first", nextProps.layout);
       newLayoutBase = nextProps.layout;
     } else if (!childrenEqual(nextProps.children, prevState.children)) {
       // If children change, also regenerate the layout. Use our state
       // as the base in case because it may be more up to date than
       // what is in props.
       newLayoutBase = prevState.layout;
+      console.log("second", nextProps.layout);
     }
 
     // We need to regenerate the layout.
@@ -338,15 +344,30 @@ export default class ReactGridLayout extends React.Component<Props, State> {
 
     // Set state
     const newLayout = compact(layout, compactType(this.props), cols);
-    const { oldLayout } = this.state;
+    const containerLayout = getContainerGridLayout(layout, l);
+
+    const { oldLayout, removedLayout } = this.state;
     this.setState({
       activeDrag: null,
       layout: newLayout,
+      removedLayout: containerLayout ? [...removedLayout, l] : removedLayout,
       oldDragItem: null,
       oldLayout: null
     });
 
     this.onLayoutMaybeChanged(newLayout, oldLayout);
+  }
+
+  getChild(key: string) {
+    let grid;
+    React.Children.forEach(this.props.children, child => {
+      if (child.key === key) {
+        grid = child;
+        return;
+      }
+    });
+
+    return grid;
   }
 
   onLayoutMaybeChanged(newLayout: Layout, oldLayout: ?Layout) {
@@ -383,7 +404,10 @@ export default class ReactGridLayout extends React.Component<Props, State> {
       const collisions = getAllCollisions(layout, { ...l, w, h }).filter(
         layoutItem => layoutItem.i !== l.i
       );
-      hasCollisions = collisions.length > 0;
+      hasCollisions =
+        layout?.isGridLayout !== true &&
+        collisions.length > 0 &&
+        collisions[0].isGridLayout !== true;
 
       // If we're colliding, we need adjust the placeholder.
       if (hasCollisions) {
@@ -471,6 +495,7 @@ export default class ReactGridLayout extends React.Component<Props, State> {
         x={activeDrag.x}
         y={activeDrag.y}
         i={activeDrag.i}
+        isGridLayout={activeDrag.isGridLayout}
         className="react-grid-placeholder"
         containerWidth={width}
         cols={cols}
@@ -500,7 +525,11 @@ export default class ReactGridLayout extends React.Component<Props, State> {
   ): ?ReactElement<any> {
     if (!child || !child.key) return;
     const l = getLayoutItem(this.state.layout, String(child.key));
-    if (!l) return null;
+    if (!l || this.state.removedLayout.findIndex(x => x.i === l.i) !== -1) {
+      // console.log("notfound", l.i, this.state.removedLayout, this.state.layout);
+      return null;
+    }
+    // console.log("RENDER", l.i, this.state.removedLayout, this.state.layout);
     const {
       width,
       cols,
@@ -535,6 +564,31 @@ export default class ReactGridLayout extends React.Component<Props, State> {
 
     // isBounded set on child if set on parent, and child is not explicitly false
     const bounded = draggable && isBounded && l.isBounded !== false;
+    let newChild = null;
+    if (l.isGridLayout) {
+      const onlyChild = React.Children.only(child.props.children);
+
+      const newLayouts = [...onlyChild.props.layout];
+      const newChilds = [];
+      for (let i = 0, len = this.state.removedLayout.length; i < len; i++) {
+        const layout = this.state.removedLayout[i];
+        if (
+          layout.gridLayoutId === child.key &&
+          newLayouts.findIndex(x => x.i === layout.i) === -1
+        ) {
+          newLayouts.push(layout);
+          const find = this.props.children.find(c => c.key === layout.i);
+          newChilds.push(React.Children.only(find));
+        }
+      }
+      if (newLayouts.length !== onlyChild.props.layout.length) {
+        const newOnlyChild = React.cloneElement(onlyChild, {
+          layout: newLayouts,
+          children: [...onlyChild.props.children, ...newChilds]
+        });
+        newChild = React.cloneElement(child, { children: newOnlyChild });
+      }
+    }
 
     return (
       <GridItem
@@ -558,6 +612,8 @@ export default class ReactGridLayout extends React.Component<Props, State> {
         useCSSTransforms={useCSSTransforms && mounted}
         usePercentages={!mounted}
         transformScale={transformScale}
+        isGridLayout={l.isGridLayout === true}
+        gridLayoutId={l.gridLayoutId}
         w={l.w}
         h={l.h}
         x={l.x}
@@ -572,7 +628,7 @@ export default class ReactGridLayout extends React.Component<Props, State> {
         resizeHandles={resizeHandlesOptions}
         resizeHandle={resizeHandle}
       >
-        {child}
+        {newChild || child}
       </GridItem>
     );
   }

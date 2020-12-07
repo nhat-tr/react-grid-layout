@@ -33,7 +33,7 @@ export default function WidthProvider<Config>(
   style?: Object,
   width?: number
 |}> {
-  return class WidthProvider extends React.Component<
+  class WidthProvider extends React.Component<
     {|
       ...Config,
       measureBeforeMount?: boolean,
@@ -92,5 +92,8 @@ export default function WidthProvider<Config>(
 
       return <ComposedComponent {...rest} {...this.state} />;
     }
-  };
+  }
+  WidthProvider.displayName =
+    ComposedComponent.displayName || ComposedComponent.name || "Component";
+  return WidthProvider;
 }

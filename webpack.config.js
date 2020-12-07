@@ -17,7 +17,7 @@ module.exports = {
     libraryTarget: "umd",
     library: "ReactGridLayout"
   },
-  devtool: "source-map",
+  devtool: "eval-source-map",
   externals: {
     react: {
       commonjs: "react",

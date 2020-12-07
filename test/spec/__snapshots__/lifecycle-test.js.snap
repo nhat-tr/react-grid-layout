@@ -380,6 +380,7 @@ exports[`Lifecycle tests <ReactGridLayout> Basic Render 1`] = `
           i="0"
           isBounded={false}
           isDraggable={true}
+          isGridLayout={false}
           isResizable={true}
           key=".$0"
           margin={
@@ -485,6 +486,7 @@ exports[`Lifecycle tests <ReactGridLayout> Basic Render 1`] = `
                     "position": "absolute",
                     "transform": "translate(10px,10px)",
                     "width": "-12px",
+                    "zIndex": "auto",
                   }
                 }
               >
@@ -536,6 +538,7 @@ exports[`Lifecycle tests <ReactGridLayout> Basic Render 1`] = `
           i="1"
           isBounded={false}
           isDraggable={true}
+          isGridLayout={false}
           isResizable={true}
           key=".$1"
           margin={
@@ -641,6 +644,7 @@ exports[`Lifecycle tests <ReactGridLayout> Basic Render 1`] = `
                     "position": "absolute",
                     "transform": "translate(8px,10px)",
                     "width": "-12px",
+                    "zIndex": "auto",
                   }
                 }
               >
@@ -692,6 +696,7 @@ exports[`Lifecycle tests <ReactGridLayout> Basic Render 1`] = `
           i="2"
           isBounded={false}
           isDraggable={true}
+          isGridLayout={false}
           isResizable={true}
           key=".$2"
           margin={
@@ -797,6 +802,7 @@ exports[`Lifecycle tests <ReactGridLayout> Basic Render 1`] = `
                     "position": "absolute",
                     "transform": "translate(7px,10px)",
                     "width": "-12px",
+                    "zIndex": "auto",
                   }
                 }
               >
@@ -848,6 +854,7 @@ exports[`Lifecycle tests <ReactGridLayout> Basic Render 1`] = `
           i="3"
           isBounded={false}
           isDraggable={true}
+          isGridLayout={false}
           isResizable={true}
           key=".$3"
           margin={
@@ -953,6 +960,7 @@ exports[`Lifecycle tests <ReactGridLayout> Basic Render 1`] = `
                     "position": "absolute",
                     "transform": "translate(5px,10px)",
                     "width": "-12px",
+                    "zIndex": "auto",
                   }
                 }
               >
@@ -1004,6 +1012,7 @@ exports[`Lifecycle tests <ReactGridLayout> Basic Render 1`] = `
           i="4"
           isBounded={false}
           isDraggable={true}
+          isGridLayout={false}
           isResizable={true}
           key=".$4"
           margin={
@@ -1109,6 +1118,7 @@ exports[`Lifecycle tests <ReactGridLayout> Basic Render 1`] = `
                     "position": "absolute",
                     "transform": "translate(3px,10px)",
                     "width": "-12px",
+                    "zIndex": "auto",
                   }
                 }
               >
@@ -1160,6 +1170,7 @@ exports[`Lifecycle tests <ReactGridLayout> Basic Render 1`] = `
           i="5"
           isBounded={false}
           isDraggable={true}
+          isGridLayout={false}
           isResizable={true}
           key=".$5"
           margin={
@@ -1265,6 +1276,7 @@ exports[`Lifecycle tests <ReactGridLayout> Basic Render 1`] = `
                     "position": "absolute",
                     "transform": "translate(2px,10px)",
                     "width": "-12px",
+                    "zIndex": "auto",
                   }
                 }
               >
@@ -1316,6 +1328,7 @@ exports[`Lifecycle tests <ReactGridLayout> Basic Render 1`] = `
           i="6"
           isBounded={false}
           isDraggable={true}
+          isGridLayout={false}
           isResizable={true}
           key=".$6"
           margin={
@@ -1421,6 +1434,7 @@ exports[`Lifecycle tests <ReactGridLayout> Basic Render 1`] = `
                     "position": "absolute",
                     "transform": "translate(10px,90px)",
                     "width": "-12px",
+                    "zIndex": "auto",
                   }
                 }
               >
@@ -1472,6 +1486,7 @@ exports[`Lifecycle tests <ReactGridLayout> Basic Render 1`] = `
           i="7"
           isBounded={false}
           isDraggable={true}
+          isGridLayout={false}
           isResizable={true}
           key=".$7"
           margin={
@@ -1577,6 +1592,7 @@ exports[`Lifecycle tests <ReactGridLayout> Basic Render 1`] = `
                     "position": "absolute",
                     "transform": "translate(8px,90px)",
                     "width": "-12px",
+                    "zIndex": "auto",
                   }
                 }
               >
@@ -1628,6 +1644,7 @@ exports[`Lifecycle tests <ReactGridLayout> Basic Render 1`] = `
           i="8"
           isBounded={false}
           isDraggable={true}
+          isGridLayout={false}
           isResizable={true}
           key=".$8"
           margin={
@@ -1733,6 +1750,7 @@ exports[`Lifecycle tests <ReactGridLayout> Basic Render 1`] = `
                     "position": "absolute",
                     "transform": "translate(7px,130px)",
                     "width": "-12px",
+                    "zIndex": "auto",
                   }
                 }
               >
@@ -1784,6 +1802,7 @@ exports[`Lifecycle tests <ReactGridLayout> Basic Render 1`] = `
           i="9"
           isBounded={false}
           isDraggable={true}
+          isGridLayout={false}
           isResizable={true}
           key=".$9"
           margin={
@@ -1889,6 +1908,7 @@ exports[`Lifecycle tests <ReactGridLayout> Basic Render 1`] = `
                     "position": "absolute",
                     "transform": "translate(5px,130px)",
                     "width": "-12px",
+                    "zIndex": "auto",
                   }
                 }
               >
@@ -1940,6 +1960,7 @@ exports[`Lifecycle tests <ReactGridLayout> Basic Render 1`] = `
           i="10"
           isBounded={false}
           isDraggable={true}
+          isGridLayout={false}
           isResizable={true}
           key=".$10"
           margin={
@@ -2045,6 +2066,7 @@ exports[`Lifecycle tests <ReactGridLayout> Basic Render 1`] = `
                     "position": "absolute",
                     "transform": "translate(3px,130px)",
                     "width": "-12px",
+                    "zIndex": "auto",
                   }
                 }
               >
@@ -2096,6 +2118,7 @@ exports[`Lifecycle tests <ReactGridLayout> Basic Render 1`] = `
           i="11"
           isBounded={false}
           isDraggable={true}
+          isGridLayout={false}
           isResizable={true}
           key=".$11"
           margin={
@@ -2201,6 +2224,7 @@ exports[`Lifecycle tests <ReactGridLayout> Basic Render 1`] = `
                     "position": "absolute",
                     "transform": "translate(2px,170px)",
                     "width": "-12px",
+                    "zIndex": "auto",
                   }
                 }
               >
@@ -2252,6 +2276,7 @@ exports[`Lifecycle tests <ReactGridLayout> Basic Render 1`] = `
           i="12"
           isBounded={false}
           isDraggable={true}
+          isGridLayout={false}
           isResizable={true}
           key=".$12"
           margin={
@@ -2357,6 +2382,7 @@ exports[`Lifecycle tests <ReactGridLayout> Basic Render 1`] = `
                     "position": "absolute",
                     "transform": "translate(10px,250px)",
                     "width": "-12px",
+                    "zIndex": "auto",
                   }
                 }
               >
@@ -2408,6 +2434,7 @@ exports[`Lifecycle tests <ReactGridLayout> Basic Render 1`] = `
           i="13"
           isBounded={false}
           isDraggable={true}
+          isGridLayout={false}
           isResizable={true}
           key=".$13"
           margin={
@@ -2513,6 +2540,7 @@ exports[`Lifecycle tests <ReactGridLayout> Basic Render 1`] = `
                     "position": "absolute",
                     "transform": "translate(8px,290px)",
                     "width": "-12px",
+                    "zIndex": "auto",
                   }
                 }
               >
@@ -2564,6 +2592,7 @@ exports[`Lifecycle tests <ReactGridLayout> Basic Render 1`] = `
           i="14"
           isBounded={false}
           isDraggable={true}
+          isGridLayout={false}
           isResizable={true}
           key=".$14"
           margin={
@@ -2669,6 +2698,7 @@ exports[`Lifecycle tests <ReactGridLayout> Basic Render 1`] = `
                     "position": "absolute",
                     "transform": "translate(7px,330px)",
                     "width": "-12px",
+                    "zIndex": "auto",
                   }
                 }
               >
@@ -2720,6 +2750,7 @@ exports[`Lifecycle tests <ReactGridLayout> Basic Render 1`] = `
           i="15"
           isBounded={false}
           isDraggable={true}
+          isGridLayout={false}
           isResizable={true}
           key=".$15"
           margin={
@@ -2825,6 +2856,7 @@ exports[`Lifecycle tests <ReactGridLayout> Basic Render 1`] = `
                     "position": "absolute",
                     "transform": "translate(5px,330px)",
                     "width": "-12px",
+                    "zIndex": "auto",
                   }
                 }
               >
@@ -2876,6 +2908,7 @@ exports[`Lifecycle tests <ReactGridLayout> Basic Render 1`] = `
           i="16"
           isBounded={false}
           isDraggable={true}
+          isGridLayout={false}
           isResizable={true}
           key=".$16"
           margin={
@@ -2981,6 +3014,7 @@ exports[`Lifecycle tests <ReactGridLayout> Basic Render 1`] = `
                     "position": "absolute",
                     "transform": "translate(3px,210px)",
                     "width": "-12px",
+                    "zIndex": "auto",
                   }
                 }
               >
@@ -3032,6 +3066,7 @@ exports[`Lifecycle tests <ReactGridLayout> Basic Render 1`] = `
           i="17"
           isBounded={false}
           isDraggable={true}
+          isGridLayout={false}
           isResizable={true}
           key=".$17"
           margin={
@@ -3137,6 +3172,7 @@ exports[`Lifecycle tests <ReactGridLayout> Basic Render 1`] = `
                     "position": "absolute",
                     "transform": "translate(2px,250px)",
                     "width": "-12px",
+                    "zIndex": "auto",
                   }
                 }
               >
@@ -3188,6 +3224,7 @@ exports[`Lifecycle tests <ReactGridLayout> Basic Render 1`] = `
           i="18"
           isBounded={false}
           isDraggable={true}
+          isGridLayout={false}
           isResizable={true}
           key=".$18"
           margin={
@@ -3293,6 +3330,7 @@ exports[`Lifecycle tests <ReactGridLayout> Basic Render 1`] = `
                     "position": "absolute",
                     "transform": "translate(10px,330px)",
                     "width": "-12px",
+                    "zIndex": "auto",
                   }
                 }
               >
@@ -3344,6 +3382,7 @@ exports[`Lifecycle tests <ReactGridLayout> Basic Render 1`] = `
           i="19"
           isBounded={false}
           isDraggable={true}
+          isGridLayout={false}
           isResizable={true}
           key=".$19"
           margin={
@@ -3449,6 +3488,7 @@ exports[`Lifecycle tests <ReactGridLayout> Basic Render 1`] = `
                     "position": "absolute",
                     "transform": "translate(8px,410px)",
                     "width": "-12px",
+                    "zIndex": "auto",
                   }
                 }
               >
@@ -3516,7 +3556,7 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
     <div>
       Compaction type:
        
-      Vertical
+      No Compaction
     </div>
     <button
       onClick={[Function]}
@@ -3539,209 +3579,391 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
           "xxs": 2,
         }
       }
-      compactType="vertical"
+      compactType={null}
       layouts={
         Object {
           "lg": Array [
             Object {
+              "gridLayoutId": undefined,
               "h": 2,
               "i": "0",
+              "isBounded": undefined,
+              "isDraggable": undefined,
+              "isGridLayout": true,
+              "isResizable": undefined,
+              "maxH": undefined,
+              "maxW": undefined,
+              "minH": undefined,
+              "minW": undefined,
+              "moved": false,
+              "resizeHandles": undefined,
               "static": false,
               "w": 2,
               "x": 2,
               "y": 0,
             },
             Object {
+              "gridLayoutId": undefined,
               "h": 3,
               "i": "1",
+              "isBounded": undefined,
+              "isDraggable": undefined,
+              "isGridLayout": false,
+              "isResizable": undefined,
+              "maxH": undefined,
+              "maxW": undefined,
+              "minH": undefined,
+              "minW": undefined,
+              "moved": false,
+              "resizeHandles": undefined,
               "static": false,
               "w": 2,
               "x": 6,
               "y": 0,
             },
             Object {
+              "gridLayoutId": undefined,
               "h": 4,
               "i": "2",
+              "isBounded": undefined,
+              "isDraggable": undefined,
+              "isGridLayout": false,
+              "isResizable": undefined,
+              "maxH": undefined,
+              "maxW": undefined,
+              "minH": undefined,
+              "minW": undefined,
+              "moved": false,
+              "resizeHandles": undefined,
               "static": false,
               "w": 2,
               "x": 8,
               "y": 0,
             },
             Object {
+              "gridLayoutId": undefined,
               "h": 5,
               "i": "3",
+              "isBounded": undefined,
+              "isDraggable": undefined,
+              "isGridLayout": true,
+              "isResizable": undefined,
+              "maxH": undefined,
+              "maxW": undefined,
+              "minH": undefined,
+              "minW": undefined,
+              "moved": false,
+              "resizeHandles": undefined,
               "static": false,
               "w": 2,
               "x": 0,
               "y": 0,
             },
             Object {
+              "gridLayoutId": undefined,
               "h": 2,
               "i": "4",
+              "isBounded": undefined,
+              "isDraggable": undefined,
+              "isGridLayout": false,
+              "isResizable": undefined,
+              "maxH": undefined,
+              "maxW": undefined,
+              "minH": undefined,
+              "minW": undefined,
+              "moved": false,
+              "resizeHandles": undefined,
               "static": false,
               "w": 2,
               "x": 4,
               "y": 0,
             },
             Object {
+              "gridLayoutId": undefined,
               "h": 3,
               "i": "5",
+              "isBounded": undefined,
+              "isDraggable": undefined,
+              "isGridLayout": false,
+              "isResizable": undefined,
+              "maxH": undefined,
+              "maxW": undefined,
+              "minH": undefined,
+              "minW": undefined,
+              "moved": false,
+              "resizeHandles": undefined,
               "static": false,
               "w": 2,
               "x": 6,
-              "y": 0,
+              "y": 3,
             },
             Object {
+              "gridLayoutId": undefined,
               "h": 5,
               "i": "6",
+              "isBounded": undefined,
+              "isDraggable": undefined,
+              "isGridLayout": false,
+              "isResizable": undefined,
+              "maxH": undefined,
+              "maxW": undefined,
+              "minH": undefined,
+              "minW": undefined,
+              "moved": false,
+              "resizeHandles": undefined,
               "static": false,
               "w": 2,
               "x": 10,
               "y": 5,
             },
             Object {
+              "gridLayoutId": undefined,
               "h": 2,
               "i": "7",
+              "isBounded": undefined,
+              "isDraggable": undefined,
+              "isGridLayout": true,
+              "isResizable": undefined,
+              "maxH": undefined,
+              "maxW": undefined,
+              "minH": undefined,
+              "minW": undefined,
+              "moved": false,
+              "resizeHandles": undefined,
               "static": false,
               "w": 2,
               "x": 2,
               "y": 2,
             },
             Object {
+              "gridLayoutId": undefined,
               "h": 3,
               "i": "8",
+              "isBounded": undefined,
+              "isDraggable": undefined,
+              "isGridLayout": false,
+              "isResizable": undefined,
+              "maxH": undefined,
+              "maxW": undefined,
+              "minH": undefined,
+              "minW": undefined,
+              "moved": false,
+              "resizeHandles": undefined,
               "static": false,
               "w": 2,
               "x": 4,
               "y": 3,
             },
             Object {
+              "gridLayoutId": undefined,
               "h": 4,
               "i": "9",
+              "isBounded": undefined,
+              "isDraggable": undefined,
+              "isGridLayout": false,
+              "isResizable": undefined,
+              "maxH": undefined,
+              "maxW": undefined,
+              "minH": undefined,
+              "minW": undefined,
+              "moved": false,
+              "resizeHandles": undefined,
               "static": false,
               "w": 2,
               "x": 8,
               "y": 4,
             },
+          ],
+          "xxs": Array [
             Object {
-              "h": 5,
-              "i": "10",
-              "static": true,
-              "w": 2,
-              "x": 10,
-              "y": 5,
-            },
-            Object {
+              "gridLayoutId": undefined,
               "h": 2,
-              "i": "11",
-              "static": false,
-              "w": 2,
-              "x": 2,
-              "y": 2,
-            },
-            Object {
-              "h": 3,
-              "i": "12",
-              "static": false,
-              "w": 2,
-              "x": 6,
-              "y": 6,
-            },
-            Object {
-              "h": 4,
-              "i": "13",
-              "static": false,
-              "w": 2,
-              "x": 8,
-              "y": 8,
-            },
-            Object {
-              "h": 5,
-              "i": "14",
+              "i": "0",
+              "isBounded": undefined,
+              "isDraggable": undefined,
+              "isGridLayout": true,
+              "isResizable": undefined,
+              "maxH": undefined,
+              "maxW": undefined,
+              "minH": undefined,
+              "minW": undefined,
+              "moved": false,
+              "resizeHandles": undefined,
               "static": false,
               "w": 2,
               "x": 0,
-              "y": 10,
+              "y": 0,
             },
             Object {
-              "h": 2,
-              "i": "15",
-              "static": false,
-              "w": 2,
-              "x": 4,
-              "y": 4,
-            },
-            Object {
+              "gridLayoutId": undefined,
               "h": 3,
-              "i": "16",
+              "i": "1",
+              "isBounded": undefined,
+              "isDraggable": undefined,
+              "isGridLayout": false,
+              "isResizable": undefined,
+              "maxH": undefined,
+              "maxW": undefined,
+              "minH": undefined,
+              "minW": undefined,
+              "moved": false,
+              "resizeHandles": undefined,
               "static": false,
               "w": 2,
-              "x": 6,
-              "y": 6,
+              "x": 0,
+              "y": 0,
             },
             Object {
-              "h": 5,
-              "i": "17",
-              "static": false,
-              "w": 2,
-              "x": 10,
-              "y": 10,
-            },
-            Object {
-              "h": 2,
-              "i": "18",
-              "static": false,
-              "w": 2,
-              "x": 2,
-              "y": 6,
-            },
-            Object {
-              "h": 3,
-              "i": "19",
-              "static": false,
-              "w": 2,
-              "x": 4,
-              "y": 9,
-            },
-            Object {
+              "gridLayoutId": undefined,
               "h": 4,
-              "i": "20",
+              "i": "2",
+              "isBounded": undefined,
+              "isDraggable": undefined,
+              "isGridLayout": false,
+              "isResizable": undefined,
+              "maxH": undefined,
+              "maxW": undefined,
+              "minH": undefined,
+              "minW": undefined,
+              "moved": false,
+              "resizeHandles": undefined,
               "static": false,
               "w": 2,
-              "x": 8,
+              "x": 0,
+              "y": 3,
+            },
+            Object {
+              "gridLayoutId": undefined,
+              "h": 5,
+              "i": "3",
+              "isBounded": undefined,
+              "isDraggable": undefined,
+              "isGridLayout": true,
+              "isResizable": undefined,
+              "maxH": undefined,
+              "maxW": undefined,
+              "minH": undefined,
+              "minW": undefined,
+              "moved": false,
+              "resizeHandles": undefined,
+              "static": false,
+              "w": 2,
+              "x": 0,
+              "y": 7,
+            },
+            Object {
+              "gridLayoutId": undefined,
+              "h": 2,
+              "i": "4",
+              "isBounded": undefined,
+              "isDraggable": undefined,
+              "isGridLayout": false,
+              "isResizable": undefined,
+              "maxH": undefined,
+              "maxW": undefined,
+              "minH": undefined,
+              "minW": undefined,
+              "moved": false,
+              "resizeHandles": undefined,
+              "static": false,
+              "w": 2,
+              "x": 0,
               "y": 12,
             },
             Object {
-              "h": 5,
-              "i": "21",
-              "static": true,
-              "w": 2,
-              "x": 10,
-              "y": 15,
-            },
-            Object {
-              "h": 2,
-              "i": "22",
-              "static": false,
-              "w": 2,
-              "x": 2,
-              "y": 6,
-            },
-            Object {
+              "gridLayoutId": undefined,
               "h": 3,
-              "i": "23",
+              "i": "5",
+              "isBounded": undefined,
+              "isDraggable": undefined,
+              "isGridLayout": false,
+              "isResizable": undefined,
+              "maxH": undefined,
+              "maxW": undefined,
+              "minH": undefined,
+              "minW": undefined,
+              "moved": false,
+              "resizeHandles": undefined,
               "static": false,
               "w": 2,
-              "x": 6,
-              "y": 9,
+              "x": 0,
+              "y": 16,
             },
             Object {
-              "h": 4,
-              "i": "24",
+              "gridLayoutId": undefined,
+              "h": 5,
+              "i": "6",
+              "isBounded": undefined,
+              "isDraggable": undefined,
+              "isGridLayout": false,
+              "isResizable": undefined,
+              "maxH": undefined,
+              "maxW": undefined,
+              "minH": undefined,
+              "minW": undefined,
+              "moved": false,
+              "resizeHandles": undefined,
               "static": false,
               "w": 2,
-              "x": 8,
-              "y": 16,
+              "x": 0,
+              "y": 26,
+            },
+            Object {
+              "gridLayoutId": undefined,
+              "h": 2,
+              "i": "7",
+              "isBounded": undefined,
+              "isDraggable": undefined,
+              "isGridLayout": true,
+              "isResizable": undefined,
+              "maxH": undefined,
+              "maxW": undefined,
+              "minH": undefined,
+              "minW": undefined,
+              "moved": false,
+              "resizeHandles": undefined,
+              "static": false,
+              "w": 2,
+              "x": 0,
+              "y": 14,
+            },
+            Object {
+              "gridLayoutId": undefined,
+              "h": 3,
+              "i": "8",
+              "isBounded": undefined,
+              "isDraggable": undefined,
+              "isGridLayout": false,
+              "isResizable": undefined,
+              "maxH": undefined,
+              "maxW": undefined,
+              "minH": undefined,
+              "minW": undefined,
+              "moved": false,
+              "resizeHandles": undefined,
+              "static": false,
+              "w": 2,
+              "x": 0,
+              "y": 19,
+            },
+            Object {
+              "gridLayoutId": undefined,
+              "h": 4,
+              "i": "9",
+              "isBounded": undefined,
+              "isDraggable": undefined,
+              "isGridLayout": false,
+              "isResizable": undefined,
+              "maxH": undefined,
+              "maxW": undefined,
+              "minH": undefined,
+              "minW": undefined,
+              "moved": false,
+              "resizeHandles": undefined,
+              "static": false,
+              "w": 2,
+              "x": 0,
+              "y": 22,
             },
           ],
         }
@@ -3750,7 +3972,7 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
       onBreakpointChange={[Function]}
       onDrop={[Function]}
       onLayoutChange={[Function]}
-      preventCollision={false}
+      preventCollision={true}
       rowHeight={30}
       useCSSTransforms={true}
     >
@@ -3774,7 +3996,7 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
             "xxs": 2,
           }
         }
-        compactType="vertical"
+        compactType={null}
         containerPadding={
           Object {
             "lg": null,
@@ -3788,204 +4010,386 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
           Object {
             "lg": Array [
               Object {
+                "gridLayoutId": undefined,
                 "h": 2,
                 "i": "0",
+                "isBounded": undefined,
+                "isDraggable": undefined,
+                "isGridLayout": true,
+                "isResizable": undefined,
+                "maxH": undefined,
+                "maxW": undefined,
+                "minH": undefined,
+                "minW": undefined,
+                "moved": false,
+                "resizeHandles": undefined,
                 "static": false,
                 "w": 2,
                 "x": 2,
                 "y": 0,
               },
               Object {
+                "gridLayoutId": undefined,
                 "h": 3,
                 "i": "1",
+                "isBounded": undefined,
+                "isDraggable": undefined,
+                "isGridLayout": false,
+                "isResizable": undefined,
+                "maxH": undefined,
+                "maxW": undefined,
+                "minH": undefined,
+                "minW": undefined,
+                "moved": false,
+                "resizeHandles": undefined,
                 "static": false,
                 "w": 2,
                 "x": 6,
                 "y": 0,
               },
               Object {
+                "gridLayoutId": undefined,
                 "h": 4,
                 "i": "2",
+                "isBounded": undefined,
+                "isDraggable": undefined,
+                "isGridLayout": false,
+                "isResizable": undefined,
+                "maxH": undefined,
+                "maxW": undefined,
+                "minH": undefined,
+                "minW": undefined,
+                "moved": false,
+                "resizeHandles": undefined,
                 "static": false,
                 "w": 2,
                 "x": 8,
                 "y": 0,
               },
               Object {
+                "gridLayoutId": undefined,
                 "h": 5,
                 "i": "3",
+                "isBounded": undefined,
+                "isDraggable": undefined,
+                "isGridLayout": true,
+                "isResizable": undefined,
+                "maxH": undefined,
+                "maxW": undefined,
+                "minH": undefined,
+                "minW": undefined,
+                "moved": false,
+                "resizeHandles": undefined,
                 "static": false,
                 "w": 2,
                 "x": 0,
                 "y": 0,
               },
               Object {
+                "gridLayoutId": undefined,
                 "h": 2,
                 "i": "4",
+                "isBounded": undefined,
+                "isDraggable": undefined,
+                "isGridLayout": false,
+                "isResizable": undefined,
+                "maxH": undefined,
+                "maxW": undefined,
+                "minH": undefined,
+                "minW": undefined,
+                "moved": false,
+                "resizeHandles": undefined,
                 "static": false,
                 "w": 2,
                 "x": 4,
                 "y": 0,
               },
               Object {
+                "gridLayoutId": undefined,
                 "h": 3,
                 "i": "5",
+                "isBounded": undefined,
+                "isDraggable": undefined,
+                "isGridLayout": false,
+                "isResizable": undefined,
+                "maxH": undefined,
+                "maxW": undefined,
+                "minH": undefined,
+                "minW": undefined,
+                "moved": false,
+                "resizeHandles": undefined,
                 "static": false,
                 "w": 2,
                 "x": 6,
-                "y": 0,
+                "y": 3,
               },
               Object {
+                "gridLayoutId": undefined,
                 "h": 5,
                 "i": "6",
+                "isBounded": undefined,
+                "isDraggable": undefined,
+                "isGridLayout": false,
+                "isResizable": undefined,
+                "maxH": undefined,
+                "maxW": undefined,
+                "minH": undefined,
+                "minW": undefined,
+                "moved": false,
+                "resizeHandles": undefined,
                 "static": false,
                 "w": 2,
                 "x": 10,
                 "y": 5,
               },
               Object {
+                "gridLayoutId": undefined,
                 "h": 2,
                 "i": "7",
+                "isBounded": undefined,
+                "isDraggable": undefined,
+                "isGridLayout": true,
+                "isResizable": undefined,
+                "maxH": undefined,
+                "maxW": undefined,
+                "minH": undefined,
+                "minW": undefined,
+                "moved": false,
+                "resizeHandles": undefined,
                 "static": false,
                 "w": 2,
                 "x": 2,
                 "y": 2,
               },
               Object {
+                "gridLayoutId": undefined,
                 "h": 3,
                 "i": "8",
+                "isBounded": undefined,
+                "isDraggable": undefined,
+                "isGridLayout": false,
+                "isResizable": undefined,
+                "maxH": undefined,
+                "maxW": undefined,
+                "minH": undefined,
+                "minW": undefined,
+                "moved": false,
+                "resizeHandles": undefined,
                 "static": false,
                 "w": 2,
                 "x": 4,
                 "y": 3,
               },
               Object {
+                "gridLayoutId": undefined,
                 "h": 4,
                 "i": "9",
+                "isBounded": undefined,
+                "isDraggable": undefined,
+                "isGridLayout": false,
+                "isResizable": undefined,
+                "maxH": undefined,
+                "maxW": undefined,
+                "minH": undefined,
+                "minW": undefined,
+                "moved": false,
+                "resizeHandles": undefined,
                 "static": false,
                 "w": 2,
                 "x": 8,
                 "y": 4,
               },
+            ],
+            "xxs": Array [
               Object {
-                "h": 5,
-                "i": "10",
-                "static": true,
-                "w": 2,
-                "x": 10,
-                "y": 5,
-              },
-              Object {
+                "gridLayoutId": undefined,
                 "h": 2,
-                "i": "11",
-                "static": false,
-                "w": 2,
-                "x": 2,
-                "y": 2,
-              },
-              Object {
-                "h": 3,
-                "i": "12",
-                "static": false,
-                "w": 2,
-                "x": 6,
-                "y": 6,
-              },
-              Object {
-                "h": 4,
-                "i": "13",
-                "static": false,
-                "w": 2,
-                "x": 8,
-                "y": 8,
-              },
-              Object {
-                "h": 5,
-                "i": "14",
+                "i": "0",
+                "isBounded": undefined,
+                "isDraggable": undefined,
+                "isGridLayout": true,
+                "isResizable": undefined,
+                "maxH": undefined,
+                "maxW": undefined,
+                "minH": undefined,
+                "minW": undefined,
+                "moved": false,
+                "resizeHandles": undefined,
                 "static": false,
                 "w": 2,
                 "x": 0,
-                "y": 10,
+                "y": 0,
               },
               Object {
-                "h": 2,
-                "i": "15",
-                "static": false,
-                "w": 2,
-                "x": 4,
-                "y": 4,
-              },
-              Object {
+                "gridLayoutId": undefined,
                 "h": 3,
-                "i": "16",
+                "i": "1",
+                "isBounded": undefined,
+                "isDraggable": undefined,
+                "isGridLayout": false,
+                "isResizable": undefined,
+                "maxH": undefined,
+                "maxW": undefined,
+                "minH": undefined,
+                "minW": undefined,
+                "moved": false,
+                "resizeHandles": undefined,
                 "static": false,
                 "w": 2,
-                "x": 6,
-                "y": 6,
+                "x": 0,
+                "y": 0,
               },
               Object {
-                "h": 5,
-                "i": "17",
-                "static": false,
-                "w": 2,
-                "x": 10,
-                "y": 10,
-              },
-              Object {
-                "h": 2,
-                "i": "18",
-                "static": false,
-                "w": 2,
-                "x": 2,
-                "y": 6,
-              },
-              Object {
-                "h": 3,
-                "i": "19",
-                "static": false,
-                "w": 2,
-                "x": 4,
-                "y": 9,
-              },
-              Object {
+                "gridLayoutId": undefined,
                 "h": 4,
-                "i": "20",
+                "i": "2",
+                "isBounded": undefined,
+                "isDraggable": undefined,
+                "isGridLayout": false,
+                "isResizable": undefined,
+                "maxH": undefined,
+                "maxW": undefined,
+                "minH": undefined,
+                "minW": undefined,
+                "moved": false,
+                "resizeHandles": undefined,
                 "static": false,
                 "w": 2,
-                "x": 8,
+                "x": 0,
+                "y": 3,
+              },
+              Object {
+                "gridLayoutId": undefined,
+                "h": 5,
+                "i": "3",
+                "isBounded": undefined,
+                "isDraggable": undefined,
+                "isGridLayout": true,
+                "isResizable": undefined,
+                "maxH": undefined,
+                "maxW": undefined,
+                "minH": undefined,
+                "minW": undefined,
+                "moved": false,
+                "resizeHandles": undefined,
+                "static": false,
+                "w": 2,
+                "x": 0,
+                "y": 7,
+              },
+              Object {
+                "gridLayoutId": undefined,
+                "h": 2,
+                "i": "4",
+                "isBounded": undefined,
+                "isDraggable": undefined,
+                "isGridLayout": false,
+                "isResizable": undefined,
+                "maxH": undefined,
+                "maxW": undefined,
+                "minH": undefined,
+                "minW": undefined,
+                "moved": false,
+                "resizeHandles": undefined,
+                "static": false,
+                "w": 2,
+                "x": 0,
                 "y": 12,
               },
               Object {
-                "h": 5,
-                "i": "21",
-                "static": true,
-                "w": 2,
-                "x": 10,
-                "y": 15,
-              },
-              Object {
-                "h": 2,
-                "i": "22",
-                "static": false,
-                "w": 2,
-                "x": 2,
-                "y": 6,
-              },
-              Object {
+                "gridLayoutId": undefined,
                 "h": 3,
-                "i": "23",
+                "i": "5",
+                "isBounded": undefined,
+                "isDraggable": undefined,
+                "isGridLayout": false,
+                "isResizable": undefined,
+                "maxH": undefined,
+                "maxW": undefined,
+                "minH": undefined,
+                "minW": undefined,
+                "moved": false,
+                "resizeHandles": undefined,
                 "static": false,
                 "w": 2,
-                "x": 6,
-                "y": 9,
+                "x": 0,
+                "y": 16,
               },
               Object {
-                "h": 4,
-                "i": "24",
+                "gridLayoutId": undefined,
+                "h": 5,
+                "i": "6",
+                "isBounded": undefined,
+                "isDraggable": undefined,
+                "isGridLayout": false,
+                "isResizable": undefined,
+                "maxH": undefined,
+                "maxW": undefined,
+                "minH": undefined,
+                "minW": undefined,
+                "moved": false,
+                "resizeHandles": undefined,
                 "static": false,
                 "w": 2,
-                "x": 8,
-                "y": 16,
+                "x": 0,
+                "y": 26,
+              },
+              Object {
+                "gridLayoutId": undefined,
+                "h": 2,
+                "i": "7",
+                "isBounded": undefined,
+                "isDraggable": undefined,
+                "isGridLayout": true,
+                "isResizable": undefined,
+                "maxH": undefined,
+                "maxW": undefined,
+                "minH": undefined,
+                "minW": undefined,
+                "moved": false,
+                "resizeHandles": undefined,
+                "static": false,
+                "w": 2,
+                "x": 0,
+                "y": 14,
+              },
+              Object {
+                "gridLayoutId": undefined,
+                "h": 3,
+                "i": "8",
+                "isBounded": undefined,
+                "isDraggable": undefined,
+                "isGridLayout": false,
+                "isResizable": undefined,
+                "maxH": undefined,
+                "maxW": undefined,
+                "minH": undefined,
+                "minW": undefined,
+                "moved": false,
+                "resizeHandles": undefined,
+                "static": false,
+                "w": 2,
+                "x": 0,
+                "y": 19,
+              },
+              Object {
+                "gridLayoutId": undefined,
+                "h": 4,
+                "i": "9",
+                "isBounded": undefined,
+                "isDraggable": undefined,
+                "isGridLayout": false,
+                "isResizable": undefined,
+                "maxH": undefined,
+                "maxW": undefined,
+                "minH": undefined,
+                "minW": undefined,
+                "moved": false,
+                "resizeHandles": undefined,
+                "static": false,
+                "w": 2,
+                "x": 0,
+                "y": 22,
               },
             ],
           }
@@ -4000,7 +4404,7 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
         onDrop={[Function]}
         onLayoutChange={[Function]}
         onWidthChange={[Function]}
-        preventCollision={false}
+        preventCollision={true}
         rowHeight={30}
         useCSSTransforms={true}
         width={0}
@@ -4009,7 +4413,7 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
           autoSize={true}
           className="layout"
           cols={2}
-          compactType="vertical"
+          compactType={null}
           containerPadding={null}
           draggableCancel=""
           draggableHandle=""
@@ -4027,10 +4431,12 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
           layout={
             Array [
               Object {
+                "gridLayoutId": undefined,
                 "h": 2,
                 "i": "0",
                 "isBounded": undefined,
                 "isDraggable": undefined,
+                "isGridLayout": true,
                 "isResizable": undefined,
                 "maxH": undefined,
                 "maxW": undefined,
@@ -4044,10 +4450,12 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
                 "y": 0,
               },
               Object {
+                "gridLayoutId": undefined,
                 "h": 3,
                 "i": "1",
                 "isBounded": undefined,
                 "isDraggable": undefined,
+                "isGridLayout": false,
                 "isResizable": undefined,
                 "maxH": undefined,
                 "maxW": undefined,
@@ -4058,13 +4466,15 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
                 "static": false,
                 "w": 2,
                 "x": 0,
-                "y": 2,
+                "y": 0,
               },
               Object {
+                "gridLayoutId": undefined,
                 "h": 4,
                 "i": "2",
                 "isBounded": undefined,
                 "isDraggable": undefined,
+                "isGridLayout": false,
                 "isResizable": undefined,
                 "maxH": undefined,
                 "maxW": undefined,
@@ -4075,13 +4485,15 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
                 "static": false,
                 "w": 2,
                 "x": 0,
-                "y": 5,
+                "y": 3,
               },
               Object {
+                "gridLayoutId": undefined,
                 "h": 5,
                 "i": "3",
                 "isBounded": undefined,
                 "isDraggable": undefined,
+                "isGridLayout": true,
                 "isResizable": undefined,
                 "maxH": undefined,
                 "maxW": undefined,
@@ -4092,13 +4504,53 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
                 "static": false,
                 "w": 2,
                 "x": 0,
-                "y": 21,
+                "y": 7,
               },
               Object {
+                "gridLayoutId": undefined,
                 "h": 2,
                 "i": "4",
                 "isBounded": undefined,
                 "isDraggable": undefined,
+                "isGridLayout": false,
+                "isResizable": undefined,
+                "maxH": undefined,
+                "maxW": undefined,
+                "minH": undefined,
+                "minW": undefined,
+                "moved": false,
+                "resizeHandles": undefined,
+                "static": false,
+                "w": 2,
+                "x": 0,
+                "y": 12,
+              },
+              Object {
+                "gridLayoutId": undefined,
+                "h": 3,
+                "i": "5",
+                "isBounded": undefined,
+                "isDraggable": undefined,
+                "isGridLayout": false,
+                "isResizable": undefined,
+                "maxH": undefined,
+                "maxW": undefined,
+                "minH": undefined,
+                "minW": undefined,
+                "moved": false,
+                "resizeHandles": undefined,
+                "static": false,
+                "w": 2,
+                "x": 0,
+                "y": 16,
+              },
+              Object {
+                "gridLayoutId": undefined,
+                "h": 5,
+                "i": "6",
+                "isBounded": undefined,
+                "isDraggable": undefined,
+                "isGridLayout": false,
                 "isResizable": undefined,
                 "maxH": undefined,
                 "maxW": undefined,
@@ -4112,44 +4564,12 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
                 "y": 26,
               },
               Object {
-                "h": 3,
-                "i": "5",
-                "isBounded": undefined,
-                "isDraggable": undefined,
-                "isResizable": undefined,
-                "maxH": undefined,
-                "maxW": undefined,
-                "minH": undefined,
-                "minW": undefined,
-                "moved": false,
-                "resizeHandles": undefined,
-                "static": false,
-                "w": 2,
-                "x": 0,
-                "y": 28,
-              },
-              Object {
-                "h": 5,
-                "i": "6",
-                "isBounded": undefined,
-                "isDraggable": undefined,
-                "isResizable": undefined,
-                "maxH": undefined,
-                "maxW": undefined,
-                "minH": undefined,
-                "minW": undefined,
-                "moved": false,
-                "resizeHandles": undefined,
-                "static": false,
-                "w": 2,
-                "x": 0,
-                "y": 44,
-              },
-              Object {
+                "gridLayoutId": undefined,
                 "h": 2,
                 "i": "7",
                 "isBounded": undefined,
                 "isDraggable": undefined,
+                "isGridLayout": true,
                 "isResizable": undefined,
                 "maxH": undefined,
                 "maxW": undefined,
@@ -4160,13 +4580,15 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
                 "static": false,
                 "w": 2,
                 "x": 0,
-                "y": 31,
+                "y": 14,
               },
               Object {
+                "gridLayoutId": undefined,
                 "h": 3,
                 "i": "8",
                 "isBounded": undefined,
                 "isDraggable": undefined,
+                "isGridLayout": false,
                 "isResizable": undefined,
                 "maxH": undefined,
                 "maxW": undefined,
@@ -4177,13 +4599,15 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
                 "static": false,
                 "w": 2,
                 "x": 0,
-                "y": 35,
+                "y": 19,
               },
               Object {
+                "gridLayoutId": undefined,
                 "h": 4,
                 "i": "9",
                 "isBounded": undefined,
                 "isDraggable": undefined,
+                "isGridLayout": false,
                 "isResizable": undefined,
                 "maxH": undefined,
                 "maxW": undefined,
@@ -4194,262 +4618,7 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
                 "static": false,
                 "w": 2,
                 "x": 0,
-                "y": 38,
-              },
-              Object {
-                "h": 5,
-                "i": "10",
-                "isBounded": undefined,
-                "isDraggable": undefined,
-                "isResizable": undefined,
-                "maxH": undefined,
-                "maxW": undefined,
-                "minH": undefined,
-                "minW": undefined,
-                "moved": false,
-                "resizeHandles": undefined,
-                "static": true,
-                "w": 2,
-                "x": 0,
-                "y": 10,
-              },
-              Object {
-                "h": 2,
-                "i": "11",
-                "isBounded": undefined,
-                "isDraggable": undefined,
-                "isResizable": undefined,
-                "maxH": undefined,
-                "maxW": undefined,
-                "minH": undefined,
-                "minW": undefined,
-                "moved": false,
-                "resizeHandles": undefined,
-                "static": false,
-                "w": 2,
-                "x": 0,
-                "y": 33,
-              },
-              Object {
-                "h": 3,
-                "i": "12",
-                "isBounded": undefined,
-                "isDraggable": undefined,
-                "isResizable": undefined,
-                "maxH": undefined,
-                "maxW": undefined,
-                "minH": undefined,
-                "minW": undefined,
-                "moved": false,
-                "resizeHandles": undefined,
-                "static": false,
-                "w": 2,
-                "x": 0,
-                "y": 49,
-              },
-              Object {
-                "h": 4,
-                "i": "13",
-                "isBounded": undefined,
-                "isDraggable": undefined,
-                "isResizable": undefined,
-                "maxH": undefined,
-                "maxW": undefined,
-                "minH": undefined,
-                "minW": undefined,
-                "moved": false,
-                "resizeHandles": undefined,
-                "static": false,
-                "w": 2,
-                "x": 0,
-                "y": 59,
-              },
-              Object {
-                "h": 5,
-                "i": "14",
-                "isBounded": undefined,
-                "isDraggable": undefined,
-                "isResizable": undefined,
-                "maxH": undefined,
-                "maxW": undefined,
-                "minH": undefined,
-                "minW": undefined,
-                "moved": false,
-                "resizeHandles": undefined,
-                "static": false,
-                "w": 2,
-                "x": 0,
-                "y": 69,
-              },
-              Object {
-                "h": 2,
-                "i": "15",
-                "isBounded": undefined,
-                "isDraggable": undefined,
-                "isResizable": undefined,
-                "maxH": undefined,
-                "maxW": undefined,
-                "minH": undefined,
-                "minW": undefined,
-                "moved": false,
-                "resizeHandles": undefined,
-                "static": false,
-                "w": 2,
-                "x": 0,
-                "y": 42,
-              },
-              Object {
-                "h": 3,
-                "i": "16",
-                "isBounded": undefined,
-                "isDraggable": undefined,
-                "isResizable": undefined,
-                "maxH": undefined,
-                "maxW": undefined,
-                "minH": undefined,
-                "minW": undefined,
-                "moved": false,
-                "resizeHandles": undefined,
-                "static": false,
-                "w": 2,
-                "x": 0,
-                "y": 52,
-              },
-              Object {
-                "h": 5,
-                "i": "17",
-                "isBounded": undefined,
-                "isDraggable": undefined,
-                "isResizable": undefined,
-                "maxH": undefined,
-                "maxW": undefined,
-                "minH": undefined,
-                "minW": undefined,
-                "moved": false,
-                "resizeHandles": undefined,
-                "static": false,
-                "w": 2,
-                "x": 0,
-                "y": 74,
-              },
-              Object {
-                "h": 2,
-                "i": "18",
-                "isBounded": undefined,
-                "isDraggable": undefined,
-                "isResizable": undefined,
-                "maxH": undefined,
-                "maxW": undefined,
-                "minH": undefined,
-                "minW": undefined,
-                "moved": false,
-                "resizeHandles": undefined,
-                "static": false,
-                "w": 2,
-                "x": 0,
-                "y": 55,
-              },
-              Object {
-                "h": 3,
-                "i": "19",
-                "isBounded": undefined,
-                "isDraggable": undefined,
-                "isResizable": undefined,
-                "maxH": undefined,
-                "maxW": undefined,
-                "minH": undefined,
-                "minW": undefined,
-                "moved": false,
-                "resizeHandles": undefined,
-                "static": false,
-                "w": 2,
-                "x": 0,
-                "y": 63,
-              },
-              Object {
-                "h": 4,
-                "i": "20",
-                "isBounded": undefined,
-                "isDraggable": undefined,
-                "isResizable": undefined,
-                "maxH": undefined,
-                "maxW": undefined,
-                "minH": undefined,
-                "minW": undefined,
-                "moved": false,
-                "resizeHandles": undefined,
-                "static": false,
-                "w": 2,
-                "x": 0,
-                "y": 79,
-              },
-              Object {
-                "h": 5,
-                "i": "21",
-                "isBounded": undefined,
-                "isDraggable": undefined,
-                "isResizable": undefined,
-                "maxH": undefined,
-                "maxW": undefined,
-                "minH": undefined,
-                "minW": undefined,
-                "moved": false,
-                "resizeHandles": undefined,
-                "static": true,
-                "w": 2,
-                "x": 0,
-                "y": 16,
-              },
-              Object {
-                "h": 2,
-                "i": "22",
-                "isBounded": undefined,
-                "isDraggable": undefined,
-                "isResizable": undefined,
-                "maxH": undefined,
-                "maxW": undefined,
-                "minH": undefined,
-                "minW": undefined,
-                "moved": false,
-                "resizeHandles": undefined,
-                "static": false,
-                "w": 2,
-                "x": 0,
-                "y": 57,
-              },
-              Object {
-                "h": 3,
-                "i": "23",
-                "isBounded": undefined,
-                "isDraggable": undefined,
-                "isResizable": undefined,
-                "maxH": undefined,
-                "maxW": undefined,
-                "minH": undefined,
-                "minW": undefined,
-                "moved": false,
-                "resizeHandles": undefined,
-                "static": false,
-                "w": 2,
-                "x": 0,
-                "y": 66,
-              },
-              Object {
-                "h": 4,
-                "i": "24",
-                "isBounded": undefined,
-                "isDraggable": undefined,
-                "isResizable": undefined,
-                "maxH": undefined,
-                "maxW": undefined,
-                "minH": undefined,
-                "minW": undefined,
-                "moved": false,
-                "resizeHandles": undefined,
-                "static": false,
-                "w": 2,
-                "x": 0,
-                "y": 83,
+                "y": 22,
               },
             ]
           }
@@ -4468,7 +4637,7 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
           onResize={[Function]}
           onResizeStart={[Function]}
           onResizeStop={[Function]}
-          preventCollision={false}
+          preventCollision={true}
           resizeHandles={
             Array [
               "se",
@@ -4489,7 +4658,7 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
             onDrop={[Function]}
             style={
               Object {
-                "height": "3490px",
+                "height": "1250px",
               }
             }
           >
@@ -4509,6 +4678,7 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
               i="0"
               isBounded={false}
               isDraggable={true}
+              isGridLayout={true}
               isResizable={true}
               key=".$0"
               margin={
@@ -4600,6 +4770,7 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
                 >
                   <div
                     className="react-grid-item react-draggable cssTransforms react-resizable"
+                    id={0}
                     key="0"
                     onMouseDown={[Function]}
                     onMouseUp={[Function]}
@@ -4614,12 +4785,15 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
                         "position": "absolute",
                         "transform": "translate(10px,10px)",
                         "width": "-20px",
+                        "zIndex": "auto",
                       }
                     }
                   >
                     <span
                       className="text"
+                      title="this is a grid"
                     >
+                      Grid layout - 
                       0
                     </span>
                     <DraggableCore
@@ -4665,6 +4839,7 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
               i="1"
               isBounded={false}
               isDraggable={true}
+              isGridLayout={false}
               isResizable={true}
               key=".$1"
               margin={
@@ -4696,7 +4871,7 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
               usePercentages={false}
               w={2}
               x={0}
-              y={2}
+              y={0}
             >
               <DraggableCore
                 allowAnyClick={false}
@@ -4756,20 +4931,22 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
                 >
                   <div
                     className="react-grid-item react-draggable cssTransforms react-resizable"
+                    id={1}
                     key="1"
                     onMouseDown={[Function]}
                     onMouseUp={[Function]}
                     onTouchEnd={[Function]}
                     style={
                       Object {
-                        "MozTransform": "translate(10px,90px)",
-                        "OTransform": "translate(10px,90px)",
-                        "WebkitTransform": "translate(10px,90px)",
+                        "MozTransform": "translate(10px,10px)",
+                        "OTransform": "translate(10px,10px)",
+                        "WebkitTransform": "translate(10px,10px)",
                         "height": "110px",
-                        "msTransform": "translate(10px,90px)",
+                        "msTransform": "translate(10px,10px)",
                         "position": "absolute",
-                        "transform": "translate(10px,90px)",
+                        "transform": "translate(10px,10px)",
                         "width": "-20px",
+                        "zIndex": "auto",
                       }
                     }
                   >
@@ -4821,6 +4998,7 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
               i="2"
               isBounded={false}
               isDraggable={true}
+              isGridLayout={false}
               isResizable={true}
               key=".$2"
               margin={
@@ -4852,7 +5030,7 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
               usePercentages={false}
               w={2}
               x={0}
-              y={5}
+              y={3}
             >
               <DraggableCore
                 allowAnyClick={false}
@@ -4912,20 +5090,22 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
                 >
                   <div
                     className="react-grid-item react-draggable cssTransforms react-resizable"
+                    id={2}
                     key="2"
                     onMouseDown={[Function]}
                     onMouseUp={[Function]}
                     onTouchEnd={[Function]}
                     style={
                       Object {
-                        "MozTransform": "translate(10px,210px)",
-                        "OTransform": "translate(10px,210px)",
-                        "WebkitTransform": "translate(10px,210px)",
+                        "MozTransform": "translate(10px,130px)",
+                        "OTransform": "translate(10px,130px)",
+                        "WebkitTransform": "translate(10px,130px)",
                         "height": "150px",
-                        "msTransform": "translate(10px,210px)",
+                        "msTransform": "translate(10px,130px)",
                         "position": "absolute",
-                        "transform": "translate(10px,210px)",
+                        "transform": "translate(10px,130px)",
                         "width": "-20px",
+                        "zIndex": "auto",
                       }
                     }
                   >
@@ -4977,6 +5157,7 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
               i="3"
               isBounded={false}
               isDraggable={true}
+              isGridLayout={true}
               isResizable={true}
               key=".$3"
               margin={
@@ -5008,7 +5189,7 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
               usePercentages={false}
               w={2}
               x={0}
-              y={21}
+              y={7}
             >
               <DraggableCore
                 allowAnyClick={false}
@@ -5068,26 +5249,30 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
                 >
                   <div
                     className="react-grid-item react-draggable cssTransforms react-resizable"
+                    id={3}
                     key="3"
                     onMouseDown={[Function]}
                     onMouseUp={[Function]}
                     onTouchEnd={[Function]}
                     style={
                       Object {
-                        "MozTransform": "translate(10px,850px)",
-                        "OTransform": "translate(10px,850px)",
-                        "WebkitTransform": "translate(10px,850px)",
+                        "MozTransform": "translate(10px,290px)",
+                        "OTransform": "translate(10px,290px)",
+                        "WebkitTransform": "translate(10px,290px)",
                         "height": "190px",
-                        "msTransform": "translate(10px,850px)",
+                        "msTransform": "translate(10px,290px)",
                         "position": "absolute",
-                        "transform": "translate(10px,850px)",
+                        "transform": "translate(10px,290px)",
                         "width": "-20px",
+                        "zIndex": "auto",
                       }
                     }
                   >
                     <span
                       className="text"
+                      title="this is a grid"
                     >
+                      Grid layout - 
                       3
                     </span>
                     <DraggableCore
@@ -5133,8 +5318,327 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
               i="4"
               isBounded={false}
               isDraggable={true}
+              isGridLayout={false}
               isResizable={true}
               key=".$4"
+              margin={
+                Array [
+                  10,
+                  10,
+                ]
+              }
+              maxH={Infinity}
+              maxRows={Infinity}
+              maxW={Infinity}
+              minH={1}
+              minW={1}
+              onDrag={[Function]}
+              onDragStart={[Function]}
+              onDragStop={[Function]}
+              onResize={[Function]}
+              onResizeStart={[Function]}
+              onResizeStop={[Function]}
+              resizeHandles={
+                Array [
+                  "se",
+                ]
+              }
+              rowHeight={30}
+              static={false}
+              transformScale={1}
+              useCSSTransforms={true}
+              usePercentages={false}
+              w={2}
+              x={0}
+              y={12}
+            >
+              <DraggableCore
+                allowAnyClick={false}
+                cancel=".react-resizable-handle"
+                disabled={false}
+                enableUserSelectHack={true}
+                grid={null}
+                handle=""
+                offsetParent={null}
+                onDrag={[Function]}
+                onMouseDown={[Function]}
+                onStart={[Function]}
+                onStop={[Function]}
+                scale={1}
+                transform={null}
+              >
+                <Resizable
+                  axis="both"
+                  draggableOpts={
+                    Object {
+                      "disabled": false,
+                    }
+                  }
+                  handleSize={
+                    Array [
+                      20,
+                      20,
+                    ]
+                  }
+                  height={70}
+                  lockAspectRatio={false}
+                  maxConstraints={
+                    Array [
+                      -20,
+                      Infinity,
+                    ]
+                  }
+                  minConstraints={
+                    Array [
+                      -15,
+                      30,
+                    ]
+                  }
+                  onMouseDown={[Function]}
+                  onMouseUp={[Function]}
+                  onResize={[Function]}
+                  onResizeStart={[Function]}
+                  onResizeStop={[Function]}
+                  onTouchEnd={[Function]}
+                  resizeHandles={
+                    Array [
+                      "se",
+                    ]
+                  }
+                  transformScale={1}
+                  width={-20}
+                >
+                  <div
+                    className="react-grid-item react-draggable cssTransforms react-resizable"
+                    id={4}
+                    key="4"
+                    onMouseDown={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchEnd={[Function]}
+                    style={
+                      Object {
+                        "MozTransform": "translate(10px,490px)",
+                        "OTransform": "translate(10px,490px)",
+                        "WebkitTransform": "translate(10px,490px)",
+                        "height": "70px",
+                        "msTransform": "translate(10px,490px)",
+                        "position": "absolute",
+                        "transform": "translate(10px,490px)",
+                        "width": "-20px",
+                        "zIndex": "auto",
+                      }
+                    }
+                  >
+                    <span
+                      className="text"
+                    >
+                      4
+                    </span>
+                    <DraggableCore
+                      allowAnyClick={false}
+                      cancel={null}
+                      disabled={false}
+                      enableUserSelectHack={true}
+                      grid={null}
+                      handle={null}
+                      key="resizableHandle-se"
+                      offsetParent={null}
+                      onDrag={[Function]}
+                      onMouseDown={[Function]}
+                      onStart={[Function]}
+                      onStop={[Function]}
+                      scale={1}
+                      transform={null}
+                    >
+                      <span
+                        className="react-resizable-handle react-resizable-handle-se"
+                        onMouseDown={[Function]}
+                        onMouseUp={[Function]}
+                        onTouchEnd={[Function]}
+                      />
+                    </DraggableCore>
+                  </div>
+                </Resizable>
+              </DraggableCore>
+            </GridItem>
+            <GridItem
+              cancel=""
+              className=""
+              cols={2}
+              containerPadding={
+                Array [
+                  10,
+                  10,
+                ]
+              }
+              containerWidth={0}
+              h={3}
+              handle=""
+              i="5"
+              isBounded={false}
+              isDraggable={true}
+              isGridLayout={false}
+              isResizable={true}
+              key=".$5"
+              margin={
+                Array [
+                  10,
+                  10,
+                ]
+              }
+              maxH={Infinity}
+              maxRows={Infinity}
+              maxW={Infinity}
+              minH={1}
+              minW={1}
+              onDrag={[Function]}
+              onDragStart={[Function]}
+              onDragStop={[Function]}
+              onResize={[Function]}
+              onResizeStart={[Function]}
+              onResizeStop={[Function]}
+              resizeHandles={
+                Array [
+                  "se",
+                ]
+              }
+              rowHeight={30}
+              static={false}
+              transformScale={1}
+              useCSSTransforms={true}
+              usePercentages={false}
+              w={2}
+              x={0}
+              y={16}
+            >
+              <DraggableCore
+                allowAnyClick={false}
+                cancel=".react-resizable-handle"
+                disabled={false}
+                enableUserSelectHack={true}
+                grid={null}
+                handle=""
+                offsetParent={null}
+                onDrag={[Function]}
+                onMouseDown={[Function]}
+                onStart={[Function]}
+                onStop={[Function]}
+                scale={1}
+                transform={null}
+              >
+                <Resizable
+                  axis="both"
+                  draggableOpts={
+                    Object {
+                      "disabled": false,
+                    }
+                  }
+                  handleSize={
+                    Array [
+                      20,
+                      20,
+                    ]
+                  }
+                  height={110}
+                  lockAspectRatio={false}
+                  maxConstraints={
+                    Array [
+                      -20,
+                      Infinity,
+                    ]
+                  }
+                  minConstraints={
+                    Array [
+                      -15,
+                      30,
+                    ]
+                  }
+                  onMouseDown={[Function]}
+                  onMouseUp={[Function]}
+                  onResize={[Function]}
+                  onResizeStart={[Function]}
+                  onResizeStop={[Function]}
+                  onTouchEnd={[Function]}
+                  resizeHandles={
+                    Array [
+                      "se",
+                    ]
+                  }
+                  transformScale={1}
+                  width={-20}
+                >
+                  <div
+                    className="react-grid-item react-draggable cssTransforms react-resizable"
+                    id={5}
+                    key="5"
+                    onMouseDown={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchEnd={[Function]}
+                    style={
+                      Object {
+                        "MozTransform": "translate(10px,650px)",
+                        "OTransform": "translate(10px,650px)",
+                        "WebkitTransform": "translate(10px,650px)",
+                        "height": "110px",
+                        "msTransform": "translate(10px,650px)",
+                        "position": "absolute",
+                        "transform": "translate(10px,650px)",
+                        "width": "-20px",
+                        "zIndex": "auto",
+                      }
+                    }
+                  >
+                    <span
+                      className="text"
+                    >
+                      5
+                    </span>
+                    <DraggableCore
+                      allowAnyClick={false}
+                      cancel={null}
+                      disabled={false}
+                      enableUserSelectHack={true}
+                      grid={null}
+                      handle={null}
+                      key="resizableHandle-se"
+                      offsetParent={null}
+                      onDrag={[Function]}
+                      onMouseDown={[Function]}
+                      onStart={[Function]}
+                      onStop={[Function]}
+                      scale={1}
+                      transform={null}
+                    >
+                      <span
+                        className="react-resizable-handle react-resizable-handle-se"
+                        onMouseDown={[Function]}
+                        onMouseUp={[Function]}
+                        onTouchEnd={[Function]}
+                      />
+                    </DraggableCore>
+                  </div>
+                </Resizable>
+              </DraggableCore>
+            </GridItem>
+            <GridItem
+              cancel=""
+              className=""
+              cols={2}
+              containerPadding={
+                Array [
+                  10,
+                  10,
+                ]
+              }
+              containerWidth={0}
+              h={5}
+              handle=""
+              i="6"
+              isBounded={false}
+              isDraggable={true}
+              isGridLayout={false}
+              isResizable={true}
+              key=".$6"
               margin={
                 Array [
                   10,
@@ -5194,318 +5698,6 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
                       20,
                     ]
                   }
-                  height={70}
-                  lockAspectRatio={false}
-                  maxConstraints={
-                    Array [
-                      -20,
-                      Infinity,
-                    ]
-                  }
-                  minConstraints={
-                    Array [
-                      -15,
-                      30,
-                    ]
-                  }
-                  onMouseDown={[Function]}
-                  onMouseUp={[Function]}
-                  onResize={[Function]}
-                  onResizeStart={[Function]}
-                  onResizeStop={[Function]}
-                  onTouchEnd={[Function]}
-                  resizeHandles={
-                    Array [
-                      "se",
-                    ]
-                  }
-                  transformScale={1}
-                  width={-20}
-                >
-                  <div
-                    className="react-grid-item react-draggable cssTransforms react-resizable"
-                    key="4"
-                    onMouseDown={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchEnd={[Function]}
-                    style={
-                      Object {
-                        "MozTransform": "translate(10px,1050px)",
-                        "OTransform": "translate(10px,1050px)",
-                        "WebkitTransform": "translate(10px,1050px)",
-                        "height": "70px",
-                        "msTransform": "translate(10px,1050px)",
-                        "position": "absolute",
-                        "transform": "translate(10px,1050px)",
-                        "width": "-20px",
-                      }
-                    }
-                  >
-                    <span
-                      className="text"
-                    >
-                      4
-                    </span>
-                    <DraggableCore
-                      allowAnyClick={false}
-                      cancel={null}
-                      disabled={false}
-                      enableUserSelectHack={true}
-                      grid={null}
-                      handle={null}
-                      key="resizableHandle-se"
-                      offsetParent={null}
-                      onDrag={[Function]}
-                      onMouseDown={[Function]}
-                      onStart={[Function]}
-                      onStop={[Function]}
-                      scale={1}
-                      transform={null}
-                    >
-                      <span
-                        className="react-resizable-handle react-resizable-handle-se"
-                        onMouseDown={[Function]}
-                        onMouseUp={[Function]}
-                        onTouchEnd={[Function]}
-                      />
-                    </DraggableCore>
-                  </div>
-                </Resizable>
-              </DraggableCore>
-            </GridItem>
-            <GridItem
-              cancel=""
-              className=""
-              cols={2}
-              containerPadding={
-                Array [
-                  10,
-                  10,
-                ]
-              }
-              containerWidth={0}
-              h={3}
-              handle=""
-              i="5"
-              isBounded={false}
-              isDraggable={true}
-              isResizable={true}
-              key=".$5"
-              margin={
-                Array [
-                  10,
-                  10,
-                ]
-              }
-              maxH={Infinity}
-              maxRows={Infinity}
-              maxW={Infinity}
-              minH={1}
-              minW={1}
-              onDrag={[Function]}
-              onDragStart={[Function]}
-              onDragStop={[Function]}
-              onResize={[Function]}
-              onResizeStart={[Function]}
-              onResizeStop={[Function]}
-              resizeHandles={
-                Array [
-                  "se",
-                ]
-              }
-              rowHeight={30}
-              static={false}
-              transformScale={1}
-              useCSSTransforms={true}
-              usePercentages={false}
-              w={2}
-              x={0}
-              y={28}
-            >
-              <DraggableCore
-                allowAnyClick={false}
-                cancel=".react-resizable-handle"
-                disabled={false}
-                enableUserSelectHack={true}
-                grid={null}
-                handle=""
-                offsetParent={null}
-                onDrag={[Function]}
-                onMouseDown={[Function]}
-                onStart={[Function]}
-                onStop={[Function]}
-                scale={1}
-                transform={null}
-              >
-                <Resizable
-                  axis="both"
-                  draggableOpts={
-                    Object {
-                      "disabled": false,
-                    }
-                  }
-                  handleSize={
-                    Array [
-                      20,
-                      20,
-                    ]
-                  }
-                  height={110}
-                  lockAspectRatio={false}
-                  maxConstraints={
-                    Array [
-                      -20,
-                      Infinity,
-                    ]
-                  }
-                  minConstraints={
-                    Array [
-                      -15,
-                      30,
-                    ]
-                  }
-                  onMouseDown={[Function]}
-                  onMouseUp={[Function]}
-                  onResize={[Function]}
-                  onResizeStart={[Function]}
-                  onResizeStop={[Function]}
-                  onTouchEnd={[Function]}
-                  resizeHandles={
-                    Array [
-                      "se",
-                    ]
-                  }
-                  transformScale={1}
-                  width={-20}
-                >
-                  <div
-                    className="react-grid-item react-draggable cssTransforms react-resizable"
-                    key="5"
-                    onMouseDown={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchEnd={[Function]}
-                    style={
-                      Object {
-                        "MozTransform": "translate(10px,1130px)",
-                        "OTransform": "translate(10px,1130px)",
-                        "WebkitTransform": "translate(10px,1130px)",
-                        "height": "110px",
-                        "msTransform": "translate(10px,1130px)",
-                        "position": "absolute",
-                        "transform": "translate(10px,1130px)",
-                        "width": "-20px",
-                      }
-                    }
-                  >
-                    <span
-                      className="text"
-                    >
-                      5
-                    </span>
-                    <DraggableCore
-                      allowAnyClick={false}
-                      cancel={null}
-                      disabled={false}
-                      enableUserSelectHack={true}
-                      grid={null}
-                      handle={null}
-                      key="resizableHandle-se"
-                      offsetParent={null}
-                      onDrag={[Function]}
-                      onMouseDown={[Function]}
-                      onStart={[Function]}
-                      onStop={[Function]}
-                      scale={1}
-                      transform={null}
-                    >
-                      <span
-                        className="react-resizable-handle react-resizable-handle-se"
-                        onMouseDown={[Function]}
-                        onMouseUp={[Function]}
-                        onTouchEnd={[Function]}
-                      />
-                    </DraggableCore>
-                  </div>
-                </Resizable>
-              </DraggableCore>
-            </GridItem>
-            <GridItem
-              cancel=""
-              className=""
-              cols={2}
-              containerPadding={
-                Array [
-                  10,
-                  10,
-                ]
-              }
-              containerWidth={0}
-              h={5}
-              handle=""
-              i="6"
-              isBounded={false}
-              isDraggable={true}
-              isResizable={true}
-              key=".$6"
-              margin={
-                Array [
-                  10,
-                  10,
-                ]
-              }
-              maxH={Infinity}
-              maxRows={Infinity}
-              maxW={Infinity}
-              minH={1}
-              minW={1}
-              onDrag={[Function]}
-              onDragStart={[Function]}
-              onDragStop={[Function]}
-              onResize={[Function]}
-              onResizeStart={[Function]}
-              onResizeStop={[Function]}
-              resizeHandles={
-                Array [
-                  "se",
-                ]
-              }
-              rowHeight={30}
-              static={false}
-              transformScale={1}
-              useCSSTransforms={true}
-              usePercentages={false}
-              w={2}
-              x={0}
-              y={44}
-            >
-              <DraggableCore
-                allowAnyClick={false}
-                cancel=".react-resizable-handle"
-                disabled={false}
-                enableUserSelectHack={true}
-                grid={null}
-                handle=""
-                offsetParent={null}
-                onDrag={[Function]}
-                onMouseDown={[Function]}
-                onStart={[Function]}
-                onStop={[Function]}
-                scale={1}
-                transform={null}
-              >
-                <Resizable
-                  axis="both"
-                  draggableOpts={
-                    Object {
-                      "disabled": false,
-                    }
-                  }
-                  handleSize={
-                    Array [
-                      20,
-                      20,
-                    ]
-                  }
                   height={190}
                   lockAspectRatio={false}
                   maxConstraints={
@@ -5536,20 +5728,22 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
                 >
                   <div
                     className="react-grid-item react-draggable cssTransforms react-resizable"
+                    id={6}
                     key="6"
                     onMouseDown={[Function]}
                     onMouseUp={[Function]}
                     onTouchEnd={[Function]}
                     style={
                       Object {
-                        "MozTransform": "translate(10px,1770px)",
-                        "OTransform": "translate(10px,1770px)",
-                        "WebkitTransform": "translate(10px,1770px)",
+                        "MozTransform": "translate(10px,1050px)",
+                        "OTransform": "translate(10px,1050px)",
+                        "WebkitTransform": "translate(10px,1050px)",
                         "height": "190px",
-                        "msTransform": "translate(10px,1770px)",
+                        "msTransform": "translate(10px,1050px)",
                         "position": "absolute",
-                        "transform": "translate(10px,1770px)",
+                        "transform": "translate(10px,1050px)",
                         "width": "-20px",
+                        "zIndex": "auto",
                       }
                     }
                   >
@@ -5601,6 +5795,7 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
               i="7"
               isBounded={false}
               isDraggable={true}
+              isGridLayout={true}
               isResizable={true}
               key=".$7"
               margin={
@@ -5632,7 +5827,7 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
               usePercentages={false}
               w={2}
               x={0}
-              y={31}
+              y={14}
             >
               <DraggableCore
                 allowAnyClick={false}
@@ -5692,26 +5887,30 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
                 >
                   <div
                     className="react-grid-item react-draggable cssTransforms react-resizable"
+                    id={7}
                     key="7"
                     onMouseDown={[Function]}
                     onMouseUp={[Function]}
                     onTouchEnd={[Function]}
                     style={
                       Object {
-                        "MozTransform": "translate(10px,1250px)",
-                        "OTransform": "translate(10px,1250px)",
-                        "WebkitTransform": "translate(10px,1250px)",
+                        "MozTransform": "translate(10px,570px)",
+                        "OTransform": "translate(10px,570px)",
+                        "WebkitTransform": "translate(10px,570px)",
                         "height": "70px",
-                        "msTransform": "translate(10px,1250px)",
+                        "msTransform": "translate(10px,570px)",
                         "position": "absolute",
-                        "transform": "translate(10px,1250px)",
+                        "transform": "translate(10px,570px)",
                         "width": "-20px",
+                        "zIndex": "auto",
                       }
                     }
                   >
                     <span
                       className="text"
+                      title="this is a grid"
                     >
+                      Grid layout - 
                       7
                     </span>
                     <DraggableCore
@@ -5757,6 +5956,7 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
               i="8"
               isBounded={false}
               isDraggable={true}
+              isGridLayout={false}
               isResizable={true}
               key=".$8"
               margin={
@@ -5788,7 +5988,7 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
               usePercentages={false}
               w={2}
               x={0}
-              y={35}
+              y={19}
             >
               <DraggableCore
                 allowAnyClick={false}
@@ -5848,20 +6048,22 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
                 >
                   <div
                     className="react-grid-item react-draggable cssTransforms react-resizable"
+                    id={8}
                     key="8"
                     onMouseDown={[Function]}
                     onMouseUp={[Function]}
                     onTouchEnd={[Function]}
                     style={
                       Object {
-                        "MozTransform": "translate(10px,1410px)",
-                        "OTransform": "translate(10px,1410px)",
-                        "WebkitTransform": "translate(10px,1410px)",
+                        "MozTransform": "translate(10px,770px)",
+                        "OTransform": "translate(10px,770px)",
+                        "WebkitTransform": "translate(10px,770px)",
                         "height": "110px",
-                        "msTransform": "translate(10px,1410px)",
+                        "msTransform": "translate(10px,770px)",
                         "position": "absolute",
-                        "transform": "translate(10px,1410px)",
+                        "transform": "translate(10px,770px)",
                         "width": "-20px",
+                        "zIndex": "auto",
                       }
                     }
                   >
@@ -5913,6 +6115,7 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
               i="9"
               isBounded={false}
               isDraggable={true}
+              isGridLayout={false}
               isResizable={true}
               key=".$9"
               margin={
@@ -5944,7 +6147,7 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
               usePercentages={false}
               w={2}
               x={0}
-              y={38}
+              y={22}
             >
               <DraggableCore
                 allowAnyClick={false}
@@ -6004,20 +6207,22 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
                 >
                   <div
                     className="react-grid-item react-draggable cssTransforms react-resizable"
+                    id={9}
                     key="9"
                     onMouseDown={[Function]}
                     onMouseUp={[Function]}
                     onTouchEnd={[Function]}
                     style={
                       Object {
-                        "MozTransform": "translate(10px,1530px)",
-                        "OTransform": "translate(10px,1530px)",
-                        "WebkitTransform": "translate(10px,1530px)",
+                        "MozTransform": "translate(10px,890px)",
+                        "OTransform": "translate(10px,890px)",
+                        "WebkitTransform": "translate(10px,890px)",
                         "height": "150px",
-                        "msTransform": "translate(10px,1530px)",
+                        "msTransform": "translate(10px,890px)",
                         "position": "absolute",
-                        "transform": "translate(10px,1530px)",
+                        "transform": "translate(10px,890px)",
                         "width": "-20px",
+                        "zIndex": "auto",
                       }
                     }
                   >
@@ -6025,2352 +6230,6 @@ exports[`Lifecycle tests <ResponsiveReactGridLayout> Basic Render 1`] = `
                       className="text"
                     >
                       9
-                    </span>
-                    <DraggableCore
-                      allowAnyClick={false}
-                      cancel={null}
-                      disabled={false}
-                      enableUserSelectHack={true}
-                      grid={null}
-                      handle={null}
-                      key="resizableHandle-se"
-                      offsetParent={null}
-                      onDrag={[Function]}
-                      onMouseDown={[Function]}
-                      onStart={[Function]}
-                      onStop={[Function]}
-                      scale={1}
-                      transform={null}
-                    >
-                      <span
-                        className="react-resizable-handle react-resizable-handle-se"
-                        onMouseDown={[Function]}
-                        onMouseUp={[Function]}
-                        onTouchEnd={[Function]}
-                      />
-                    </DraggableCore>
-                  </div>
-                </Resizable>
-              </DraggableCore>
-            </GridItem>
-            <GridItem
-              cancel=""
-              className=""
-              cols={2}
-              containerPadding={
-                Array [
-                  10,
-                  10,
-                ]
-              }
-              containerWidth={0}
-              h={5}
-              handle=""
-              i="10"
-              isBounded={false}
-              isDraggable={false}
-              isResizable={false}
-              key=".$10"
-              margin={
-                Array [
-                  10,
-                  10,
-                ]
-              }
-              maxH={Infinity}
-              maxRows={Infinity}
-              maxW={Infinity}
-              minH={1}
-              minW={1}
-              onDrag={[Function]}
-              onDragStart={[Function]}
-              onDragStop={[Function]}
-              onResize={[Function]}
-              onResizeStart={[Function]}
-              onResizeStop={[Function]}
-              resizeHandles={
-                Array [
-                  "se",
-                ]
-              }
-              rowHeight={30}
-              static={true}
-              transformScale={1}
-              useCSSTransforms={true}
-              usePercentages={false}
-              w={2}
-              x={0}
-              y={10}
-            >
-              <DraggableCore
-                allowAnyClick={false}
-                cancel=".react-resizable-handle"
-                disabled={true}
-                enableUserSelectHack={true}
-                grid={null}
-                handle=""
-                offsetParent={null}
-                onDrag={[Function]}
-                onMouseDown={[Function]}
-                onStart={[Function]}
-                onStop={[Function]}
-                scale={1}
-                transform={null}
-              >
-                <Resizable
-                  axis="both"
-                  className="react-resizable-hide"
-                  draggableOpts={
-                    Object {
-                      "disabled": true,
-                    }
-                  }
-                  handleSize={
-                    Array [
-                      20,
-                      20,
-                    ]
-                  }
-                  height={190}
-                  lockAspectRatio={false}
-                  maxConstraints={
-                    Array [
-                      -20,
-                      Infinity,
-                    ]
-                  }
-                  minConstraints={
-                    Array [
-                      -15,
-                      30,
-                    ]
-                  }
-                  onMouseDown={[Function]}
-                  onMouseUp={[Function]}
-                  onResize={[Function]}
-                  onResizeStart={[Function]}
-                  onResizeStop={[Function]}
-                  onTouchEnd={[Function]}
-                  resizeHandles={
-                    Array [
-                      "se",
-                    ]
-                  }
-                  transformScale={1}
-                  width={-20}
-                >
-                  <div
-                    className="react-grid-item static static cssTransforms react-resizable-hide react-resizable"
-                    key="10"
-                    onMouseDown={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchEnd={[Function]}
-                    style={
-                      Object {
-                        "MozTransform": "translate(10px,410px)",
-                        "OTransform": "translate(10px,410px)",
-                        "WebkitTransform": "translate(10px,410px)",
-                        "height": "190px",
-                        "msTransform": "translate(10px,410px)",
-                        "position": "absolute",
-                        "transform": "translate(10px,410px)",
-                        "width": "-20px",
-                      }
-                    }
-                  >
-                    <span
-                      className="text"
-                      title="This item is static and cannot be removed or resized."
-                    >
-                      Static - 
-                      10
-                    </span>
-                    <DraggableCore
-                      allowAnyClick={false}
-                      cancel={null}
-                      disabled={true}
-                      enableUserSelectHack={true}
-                      grid={null}
-                      handle={null}
-                      key="resizableHandle-se"
-                      offsetParent={null}
-                      onDrag={[Function]}
-                      onMouseDown={[Function]}
-                      onStart={[Function]}
-                      onStop={[Function]}
-                      scale={1}
-                      transform={null}
-                    >
-                      <span
-                        className="react-resizable-handle react-resizable-handle-se"
-                        onMouseDown={[Function]}
-                        onMouseUp={[Function]}
-                        onTouchEnd={[Function]}
-                      />
-                    </DraggableCore>
-                  </div>
-                </Resizable>
-              </DraggableCore>
-            </GridItem>
-            <GridItem
-              cancel=""
-              className=""
-              cols={2}
-              containerPadding={
-                Array [
-                  10,
-                  10,
-                ]
-              }
-              containerWidth={0}
-              h={2}
-              handle=""
-              i="11"
-              isBounded={false}
-              isDraggable={true}
-              isResizable={true}
-              key=".$11"
-              margin={
-                Array [
-                  10,
-                  10,
-                ]
-              }
-              maxH={Infinity}
-              maxRows={Infinity}
-              maxW={Infinity}
-              minH={1}
-              minW={1}
-              onDrag={[Function]}
-              onDragStart={[Function]}
-              onDragStop={[Function]}
-              onResize={[Function]}
-              onResizeStart={[Function]}
-              onResizeStop={[Function]}
-              resizeHandles={
-                Array [
-                  "se",
-                ]
-              }
-              rowHeight={30}
-              static={false}
-              transformScale={1}
-              useCSSTransforms={true}
-              usePercentages={false}
-              w={2}
-              x={0}
-              y={33}
-            >
-              <DraggableCore
-                allowAnyClick={false}
-                cancel=".react-resizable-handle"
-                disabled={false}
-                enableUserSelectHack={true}
-                grid={null}
-                handle=""
-                offsetParent={null}
-                onDrag={[Function]}
-                onMouseDown={[Function]}
-                onStart={[Function]}
-                onStop={[Function]}
-                scale={1}
-                transform={null}
-              >
-                <Resizable
-                  axis="both"
-                  draggableOpts={
-                    Object {
-                      "disabled": false,
-                    }
-                  }
-                  handleSize={
-                    Array [
-                      20,
-                      20,
-                    ]
-                  }
-                  height={70}
-                  lockAspectRatio={false}
-                  maxConstraints={
-                    Array [
-                      -20,
-                      Infinity,
-                    ]
-                  }
-                  minConstraints={
-                    Array [
-                      -15,
-                      30,
-                    ]
-                  }
-                  onMouseDown={[Function]}
-                  onMouseUp={[Function]}
-                  onResize={[Function]}
-                  onResizeStart={[Function]}
-                  onResizeStop={[Function]}
-                  onTouchEnd={[Function]}
-                  resizeHandles={
-                    Array [
-                      "se",
-                    ]
-                  }
-                  transformScale={1}
-                  width={-20}
-                >
-                  <div
-                    className="react-grid-item react-draggable cssTransforms react-resizable"
-                    key="11"
-                    onMouseDown={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchEnd={[Function]}
-                    style={
-                      Object {
-                        "MozTransform": "translate(10px,1330px)",
-                        "OTransform": "translate(10px,1330px)",
-                        "WebkitTransform": "translate(10px,1330px)",
-                        "height": "70px",
-                        "msTransform": "translate(10px,1330px)",
-                        "position": "absolute",
-                        "transform": "translate(10px,1330px)",
-                        "width": "-20px",
-                      }
-                    }
-                  >
-                    <span
-                      className="text"
-                    >
-                      11
-                    </span>
-                    <DraggableCore
-                      allowAnyClick={false}
-                      cancel={null}
-                      disabled={false}
-                      enableUserSelectHack={true}
-                      grid={null}
-                      handle={null}
-                      key="resizableHandle-se"
-                      offsetParent={null}
-                      onDrag={[Function]}
-                      onMouseDown={[Function]}
-                      onStart={[Function]}
-                      onStop={[Function]}
-                      scale={1}
-                      transform={null}
-                    >
-                      <span
-                        className="react-resizable-handle react-resizable-handle-se"
-                        onMouseDown={[Function]}
-                        onMouseUp={[Function]}
-                        onTouchEnd={[Function]}
-                      />
-                    </DraggableCore>
-                  </div>
-                </Resizable>
-              </DraggableCore>
-            </GridItem>
-            <GridItem
-              cancel=""
-              className=""
-              cols={2}
-              containerPadding={
-                Array [
-                  10,
-                  10,
-                ]
-              }
-              containerWidth={0}
-              h={3}
-              handle=""
-              i="12"
-              isBounded={false}
-              isDraggable={true}
-              isResizable={true}
-              key=".$12"
-              margin={
-                Array [
-                  10,
-                  10,
-                ]
-              }
-              maxH={Infinity}
-              maxRows={Infinity}
-              maxW={Infinity}
-              minH={1}
-              minW={1}
-              onDrag={[Function]}
-              onDragStart={[Function]}
-              onDragStop={[Function]}
-              onResize={[Function]}
-              onResizeStart={[Function]}
-              onResizeStop={[Function]}
-              resizeHandles={
-                Array [
-                  "se",
-                ]
-              }
-              rowHeight={30}
-              static={false}
-              transformScale={1}
-              useCSSTransforms={true}
-              usePercentages={false}
-              w={2}
-              x={0}
-              y={49}
-            >
-              <DraggableCore
-                allowAnyClick={false}
-                cancel=".react-resizable-handle"
-                disabled={false}
-                enableUserSelectHack={true}
-                grid={null}
-                handle=""
-                offsetParent={null}
-                onDrag={[Function]}
-                onMouseDown={[Function]}
-                onStart={[Function]}
-                onStop={[Function]}
-                scale={1}
-                transform={null}
-              >
-                <Resizable
-                  axis="both"
-                  draggableOpts={
-                    Object {
-                      "disabled": false,
-                    }
-                  }
-                  handleSize={
-                    Array [
-                      20,
-                      20,
-                    ]
-                  }
-                  height={110}
-                  lockAspectRatio={false}
-                  maxConstraints={
-                    Array [
-                      -20,
-                      Infinity,
-                    ]
-                  }
-                  minConstraints={
-                    Array [
-                      -15,
-                      30,
-                    ]
-                  }
-                  onMouseDown={[Function]}
-                  onMouseUp={[Function]}
-                  onResize={[Function]}
-                  onResizeStart={[Function]}
-                  onResizeStop={[Function]}
-                  onTouchEnd={[Function]}
-                  resizeHandles={
-                    Array [
-                      "se",
-                    ]
-                  }
-                  transformScale={1}
-                  width={-20}
-                >
-                  <div
-                    className="react-grid-item react-draggable cssTransforms react-resizable"
-                    key="12"
-                    onMouseDown={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchEnd={[Function]}
-                    style={
-                      Object {
-                        "MozTransform": "translate(10px,1970px)",
-                        "OTransform": "translate(10px,1970px)",
-                        "WebkitTransform": "translate(10px,1970px)",
-                        "height": "110px",
-                        "msTransform": "translate(10px,1970px)",
-                        "position": "absolute",
-                        "transform": "translate(10px,1970px)",
-                        "width": "-20px",
-                      }
-                    }
-                  >
-                    <span
-                      className="text"
-                    >
-                      12
-                    </span>
-                    <DraggableCore
-                      allowAnyClick={false}
-                      cancel={null}
-                      disabled={false}
-                      enableUserSelectHack={true}
-                      grid={null}
-                      handle={null}
-                      key="resizableHandle-se"
-                      offsetParent={null}
-                      onDrag={[Function]}
-                      onMouseDown={[Function]}
-                      onStart={[Function]}
-                      onStop={[Function]}
-                      scale={1}
-                      transform={null}
-                    >
-                      <span
-                        className="react-resizable-handle react-resizable-handle-se"
-                        onMouseDown={[Function]}
-                        onMouseUp={[Function]}
-                        onTouchEnd={[Function]}
-                      />
-                    </DraggableCore>
-                  </div>
-                </Resizable>
-              </DraggableCore>
-            </GridItem>
-            <GridItem
-              cancel=""
-              className=""
-              cols={2}
-              containerPadding={
-                Array [
-                  10,
-                  10,
-                ]
-              }
-              containerWidth={0}
-              h={4}
-              handle=""
-              i="13"
-              isBounded={false}
-              isDraggable={true}
-              isResizable={true}
-              key=".$13"
-              margin={
-                Array [
-                  10,
-                  10,
-                ]
-              }
-              maxH={Infinity}
-              maxRows={Infinity}
-              maxW={Infinity}
-              minH={1}
-              minW={1}
-              onDrag={[Function]}
-              onDragStart={[Function]}
-              onDragStop={[Function]}
-              onResize={[Function]}
-              onResizeStart={[Function]}
-              onResizeStop={[Function]}
-              resizeHandles={
-                Array [
-                  "se",
-                ]
-              }
-              rowHeight={30}
-              static={false}
-              transformScale={1}
-              useCSSTransforms={true}
-              usePercentages={false}
-              w={2}
-              x={0}
-              y={59}
-            >
-              <DraggableCore
-                allowAnyClick={false}
-                cancel=".react-resizable-handle"
-                disabled={false}
-                enableUserSelectHack={true}
-                grid={null}
-                handle=""
-                offsetParent={null}
-                onDrag={[Function]}
-                onMouseDown={[Function]}
-                onStart={[Function]}
-                onStop={[Function]}
-                scale={1}
-                transform={null}
-              >
-                <Resizable
-                  axis="both"
-                  draggableOpts={
-                    Object {
-                      "disabled": false,
-                    }
-                  }
-                  handleSize={
-                    Array [
-                      20,
-                      20,
-                    ]
-                  }
-                  height={150}
-                  lockAspectRatio={false}
-                  maxConstraints={
-                    Array [
-                      -20,
-                      Infinity,
-                    ]
-                  }
-                  minConstraints={
-                    Array [
-                      -15,
-                      30,
-                    ]
-                  }
-                  onMouseDown={[Function]}
-                  onMouseUp={[Function]}
-                  onResize={[Function]}
-                  onResizeStart={[Function]}
-                  onResizeStop={[Function]}
-                  onTouchEnd={[Function]}
-                  resizeHandles={
-                    Array [
-                      "se",
-                    ]
-                  }
-                  transformScale={1}
-                  width={-20}
-                >
-                  <div
-                    className="react-grid-item react-draggable cssTransforms react-resizable"
-                    key="13"
-                    onMouseDown={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchEnd={[Function]}
-                    style={
-                      Object {
-                        "MozTransform": "translate(10px,2370px)",
-                        "OTransform": "translate(10px,2370px)",
-                        "WebkitTransform": "translate(10px,2370px)",
-                        "height": "150px",
-                        "msTransform": "translate(10px,2370px)",
-                        "position": "absolute",
-                        "transform": "translate(10px,2370px)",
-                        "width": "-20px",
-                      }
-                    }
-                  >
-                    <span
-                      className="text"
-                    >
-                      13
-                    </span>
-                    <DraggableCore
-                      allowAnyClick={false}
-                      cancel={null}
-                      disabled={false}
-                      enableUserSelectHack={true}
-                      grid={null}
-                      handle={null}
-                      key="resizableHandle-se"
-                      offsetParent={null}
-                      onDrag={[Function]}
-                      onMouseDown={[Function]}
-                      onStart={[Function]}
-                      onStop={[Function]}
-                      scale={1}
-                      transform={null}
-                    >
-                      <span
-                        className="react-resizable-handle react-resizable-handle-se"
-                        onMouseDown={[Function]}
-                        onMouseUp={[Function]}
-                        onTouchEnd={[Function]}
-                      />
-                    </DraggableCore>
-                  </div>
-                </Resizable>
-              </DraggableCore>
-            </GridItem>
-            <GridItem
-              cancel=""
-              className=""
-              cols={2}
-              containerPadding={
-                Array [
-                  10,
-                  10,
-                ]
-              }
-              containerWidth={0}
-              h={5}
-              handle=""
-              i="14"
-              isBounded={false}
-              isDraggable={true}
-              isResizable={true}
-              key=".$14"
-              margin={
-                Array [
-                  10,
-                  10,
-                ]
-              }
-              maxH={Infinity}
-              maxRows={Infinity}
-              maxW={Infinity}
-              minH={1}
-              minW={1}
-              onDrag={[Function]}
-              onDragStart={[Function]}
-              onDragStop={[Function]}
-              onResize={[Function]}
-              onResizeStart={[Function]}
-              onResizeStop={[Function]}
-              resizeHandles={
-                Array [
-                  "se",
-                ]
-              }
-              rowHeight={30}
-              static={false}
-              transformScale={1}
-              useCSSTransforms={true}
-              usePercentages={false}
-              w={2}
-              x={0}
-              y={69}
-            >
-              <DraggableCore
-                allowAnyClick={false}
-                cancel=".react-resizable-handle"
-                disabled={false}
-                enableUserSelectHack={true}
-                grid={null}
-                handle=""
-                offsetParent={null}
-                onDrag={[Function]}
-                onMouseDown={[Function]}
-                onStart={[Function]}
-                onStop={[Function]}
-                scale={1}
-                transform={null}
-              >
-                <Resizable
-                  axis="both"
-                  draggableOpts={
-                    Object {
-                      "disabled": false,
-                    }
-                  }
-                  handleSize={
-                    Array [
-                      20,
-                      20,
-                    ]
-                  }
-                  height={190}
-                  lockAspectRatio={false}
-                  maxConstraints={
-                    Array [
-                      -20,
-                      Infinity,
-                    ]
-                  }
-                  minConstraints={
-                    Array [
-                      -15,
-                      30,
-                    ]
-                  }
-                  onMouseDown={[Function]}
-                  onMouseUp={[Function]}
-                  onResize={[Function]}
-                  onResizeStart={[Function]}
-                  onResizeStop={[Function]}
-                  onTouchEnd={[Function]}
-                  resizeHandles={
-                    Array [
-                      "se",
-                    ]
-                  }
-                  transformScale={1}
-                  width={-20}
-                >
-                  <div
-                    className="react-grid-item react-draggable cssTransforms react-resizable"
-                    key="14"
-                    onMouseDown={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchEnd={[Function]}
-                    style={
-                      Object {
-                        "MozTransform": "translate(10px,2770px)",
-                        "OTransform": "translate(10px,2770px)",
-                        "WebkitTransform": "translate(10px,2770px)",
-                        "height": "190px",
-                        "msTransform": "translate(10px,2770px)",
-                        "position": "absolute",
-                        "transform": "translate(10px,2770px)",
-                        "width": "-20px",
-                      }
-                    }
-                  >
-                    <span
-                      className="text"
-                    >
-                      14
-                    </span>
-                    <DraggableCore
-                      allowAnyClick={false}
-                      cancel={null}
-                      disabled={false}
-                      enableUserSelectHack={true}
-                      grid={null}
-                      handle={null}
-                      key="resizableHandle-se"
-                      offsetParent={null}
-                      onDrag={[Function]}
-                      onMouseDown={[Function]}
-                      onStart={[Function]}
-                      onStop={[Function]}
-                      scale={1}
-                      transform={null}
-                    >
-                      <span
-                        className="react-resizable-handle react-resizable-handle-se"
-                        onMouseDown={[Function]}
-                        onMouseUp={[Function]}
-                        onTouchEnd={[Function]}
-                      />
-                    </DraggableCore>
-                  </div>
-                </Resizable>
-              </DraggableCore>
-            </GridItem>
-            <GridItem
-              cancel=""
-              className=""
-              cols={2}
-              containerPadding={
-                Array [
-                  10,
-                  10,
-                ]
-              }
-              containerWidth={0}
-              h={2}
-              handle=""
-              i="15"
-              isBounded={false}
-              isDraggable={true}
-              isResizable={true}
-              key=".$15"
-              margin={
-                Array [
-                  10,
-                  10,
-                ]
-              }
-              maxH={Infinity}
-              maxRows={Infinity}
-              maxW={Infinity}
-              minH={1}
-              minW={1}
-              onDrag={[Function]}
-              onDragStart={[Function]}
-              onDragStop={[Function]}
-              onResize={[Function]}
-              onResizeStart={[Function]}
-              onResizeStop={[Function]}
-              resizeHandles={
-                Array [
-                  "se",
-                ]
-              }
-              rowHeight={30}
-              static={false}
-              transformScale={1}
-              useCSSTransforms={true}
-              usePercentages={false}
-              w={2}
-              x={0}
-              y={42}
-            >
-              <DraggableCore
-                allowAnyClick={false}
-                cancel=".react-resizable-handle"
-                disabled={false}
-                enableUserSelectHack={true}
-                grid={null}
-                handle=""
-                offsetParent={null}
-                onDrag={[Function]}
-                onMouseDown={[Function]}
-                onStart={[Function]}
-                onStop={[Function]}
-                scale={1}
-                transform={null}
-              >
-                <Resizable
-                  axis="both"
-                  draggableOpts={
-                    Object {
-                      "disabled": false,
-                    }
-                  }
-                  handleSize={
-                    Array [
-                      20,
-                      20,
-                    ]
-                  }
-                  height={70}
-                  lockAspectRatio={false}
-                  maxConstraints={
-                    Array [
-                      -20,
-                      Infinity,
-                    ]
-                  }
-                  minConstraints={
-                    Array [
-                      -15,
-                      30,
-                    ]
-                  }
-                  onMouseDown={[Function]}
-                  onMouseUp={[Function]}
-                  onResize={[Function]}
-                  onResizeStart={[Function]}
-                  onResizeStop={[Function]}
-                  onTouchEnd={[Function]}
-                  resizeHandles={
-                    Array [
-                      "se",
-                    ]
-                  }
-                  transformScale={1}
-                  width={-20}
-                >
-                  <div
-                    className="react-grid-item react-draggable cssTransforms react-resizable"
-                    key="15"
-                    onMouseDown={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchEnd={[Function]}
-                    style={
-                      Object {
-                        "MozTransform": "translate(10px,1690px)",
-                        "OTransform": "translate(10px,1690px)",
-                        "WebkitTransform": "translate(10px,1690px)",
-                        "height": "70px",
-                        "msTransform": "translate(10px,1690px)",
-                        "position": "absolute",
-                        "transform": "translate(10px,1690px)",
-                        "width": "-20px",
-                      }
-                    }
-                  >
-                    <span
-                      className="text"
-                    >
-                      15
-                    </span>
-                    <DraggableCore
-                      allowAnyClick={false}
-                      cancel={null}
-                      disabled={false}
-                      enableUserSelectHack={true}
-                      grid={null}
-                      handle={null}
-                      key="resizableHandle-se"
-                      offsetParent={null}
-                      onDrag={[Function]}
-                      onMouseDown={[Function]}
-                      onStart={[Function]}
-                      onStop={[Function]}
-                      scale={1}
-                      transform={null}
-                    >
-                      <span
-                        className="react-resizable-handle react-resizable-handle-se"
-                        onMouseDown={[Function]}
-                        onMouseUp={[Function]}
-                        onTouchEnd={[Function]}
-                      />
-                    </DraggableCore>
-                  </div>
-                </Resizable>
-              </DraggableCore>
-            </GridItem>
-            <GridItem
-              cancel=""
-              className=""
-              cols={2}
-              containerPadding={
-                Array [
-                  10,
-                  10,
-                ]
-              }
-              containerWidth={0}
-              h={3}
-              handle=""
-              i="16"
-              isBounded={false}
-              isDraggable={true}
-              isResizable={true}
-              key=".$16"
-              margin={
-                Array [
-                  10,
-                  10,
-                ]
-              }
-              maxH={Infinity}
-              maxRows={Infinity}
-              maxW={Infinity}
-              minH={1}
-              minW={1}
-              onDrag={[Function]}
-              onDragStart={[Function]}
-              onDragStop={[Function]}
-              onResize={[Function]}
-              onResizeStart={[Function]}
-              onResizeStop={[Function]}
-              resizeHandles={
-                Array [
-                  "se",
-                ]
-              }
-              rowHeight={30}
-              static={false}
-              transformScale={1}
-              useCSSTransforms={true}
-              usePercentages={false}
-              w={2}
-              x={0}
-              y={52}
-            >
-              <DraggableCore
-                allowAnyClick={false}
-                cancel=".react-resizable-handle"
-                disabled={false}
-                enableUserSelectHack={true}
-                grid={null}
-                handle=""
-                offsetParent={null}
-                onDrag={[Function]}
-                onMouseDown={[Function]}
-                onStart={[Function]}
-                onStop={[Function]}
-                scale={1}
-                transform={null}
-              >
-                <Resizable
-                  axis="both"
-                  draggableOpts={
-                    Object {
-                      "disabled": false,
-                    }
-                  }
-                  handleSize={
-                    Array [
-                      20,
-                      20,
-                    ]
-                  }
-                  height={110}
-                  lockAspectRatio={false}
-                  maxConstraints={
-                    Array [
-                      -20,
-                      Infinity,
-                    ]
-                  }
-                  minConstraints={
-                    Array [
-                      -15,
-                      30,
-                    ]
-                  }
-                  onMouseDown={[Function]}
-                  onMouseUp={[Function]}
-                  onResize={[Function]}
-                  onResizeStart={[Function]}
-                  onResizeStop={[Function]}
-                  onTouchEnd={[Function]}
-                  resizeHandles={
-                    Array [
-                      "se",
-                    ]
-                  }
-                  transformScale={1}
-                  width={-20}
-                >
-                  <div
-                    className="react-grid-item react-draggable cssTransforms react-resizable"
-                    key="16"
-                    onMouseDown={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchEnd={[Function]}
-                    style={
-                      Object {
-                        "MozTransform": "translate(10px,2090px)",
-                        "OTransform": "translate(10px,2090px)",
-                        "WebkitTransform": "translate(10px,2090px)",
-                        "height": "110px",
-                        "msTransform": "translate(10px,2090px)",
-                        "position": "absolute",
-                        "transform": "translate(10px,2090px)",
-                        "width": "-20px",
-                      }
-                    }
-                  >
-                    <span
-                      className="text"
-                    >
-                      16
-                    </span>
-                    <DraggableCore
-                      allowAnyClick={false}
-                      cancel={null}
-                      disabled={false}
-                      enableUserSelectHack={true}
-                      grid={null}
-                      handle={null}
-                      key="resizableHandle-se"
-                      offsetParent={null}
-                      onDrag={[Function]}
-                      onMouseDown={[Function]}
-                      onStart={[Function]}
-                      onStop={[Function]}
-                      scale={1}
-                      transform={null}
-                    >
-                      <span
-                        className="react-resizable-handle react-resizable-handle-se"
-                        onMouseDown={[Function]}
-                        onMouseUp={[Function]}
-                        onTouchEnd={[Function]}
-                      />
-                    </DraggableCore>
-                  </div>
-                </Resizable>
-              </DraggableCore>
-            </GridItem>
-            <GridItem
-              cancel=""
-              className=""
-              cols={2}
-              containerPadding={
-                Array [
-                  10,
-                  10,
-                ]
-              }
-              containerWidth={0}
-              h={5}
-              handle=""
-              i="17"
-              isBounded={false}
-              isDraggable={true}
-              isResizable={true}
-              key=".$17"
-              margin={
-                Array [
-                  10,
-                  10,
-                ]
-              }
-              maxH={Infinity}
-              maxRows={Infinity}
-              maxW={Infinity}
-              minH={1}
-              minW={1}
-              onDrag={[Function]}
-              onDragStart={[Function]}
-              onDragStop={[Function]}
-              onResize={[Function]}
-              onResizeStart={[Function]}
-              onResizeStop={[Function]}
-              resizeHandles={
-                Array [
-                  "se",
-                ]
-              }
-              rowHeight={30}
-              static={false}
-              transformScale={1}
-              useCSSTransforms={true}
-              usePercentages={false}
-              w={2}
-              x={0}
-              y={74}
-            >
-              <DraggableCore
-                allowAnyClick={false}
-                cancel=".react-resizable-handle"
-                disabled={false}
-                enableUserSelectHack={true}
-                grid={null}
-                handle=""
-                offsetParent={null}
-                onDrag={[Function]}
-                onMouseDown={[Function]}
-                onStart={[Function]}
-                onStop={[Function]}
-                scale={1}
-                transform={null}
-              >
-                <Resizable
-                  axis="both"
-                  draggableOpts={
-                    Object {
-                      "disabled": false,
-                    }
-                  }
-                  handleSize={
-                    Array [
-                      20,
-                      20,
-                    ]
-                  }
-                  height={190}
-                  lockAspectRatio={false}
-                  maxConstraints={
-                    Array [
-                      -20,
-                      Infinity,
-                    ]
-                  }
-                  minConstraints={
-                    Array [
-                      -15,
-                      30,
-                    ]
-                  }
-                  onMouseDown={[Function]}
-                  onMouseUp={[Function]}
-                  onResize={[Function]}
-                  onResizeStart={[Function]}
-                  onResizeStop={[Function]}
-                  onTouchEnd={[Function]}
-                  resizeHandles={
-                    Array [
-                      "se",
-                    ]
-                  }
-                  transformScale={1}
-                  width={-20}
-                >
-                  <div
-                    className="react-grid-item react-draggable cssTransforms react-resizable"
-                    key="17"
-                    onMouseDown={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchEnd={[Function]}
-                    style={
-                      Object {
-                        "MozTransform": "translate(10px,2970px)",
-                        "OTransform": "translate(10px,2970px)",
-                        "WebkitTransform": "translate(10px,2970px)",
-                        "height": "190px",
-                        "msTransform": "translate(10px,2970px)",
-                        "position": "absolute",
-                        "transform": "translate(10px,2970px)",
-                        "width": "-20px",
-                      }
-                    }
-                  >
-                    <span
-                      className="text"
-                    >
-                      17
-                    </span>
-                    <DraggableCore
-                      allowAnyClick={false}
-                      cancel={null}
-                      disabled={false}
-                      enableUserSelectHack={true}
-                      grid={null}
-                      handle={null}
-                      key="resizableHandle-se"
-                      offsetParent={null}
-                      onDrag={[Function]}
-                      onMouseDown={[Function]}
-                      onStart={[Function]}
-                      onStop={[Function]}
-                      scale={1}
-                      transform={null}
-                    >
-                      <span
-                        className="react-resizable-handle react-resizable-handle-se"
-                        onMouseDown={[Function]}
-                        onMouseUp={[Function]}
-                        onTouchEnd={[Function]}
-                      />
-                    </DraggableCore>
-                  </div>
-                </Resizable>
-              </DraggableCore>
-            </GridItem>
-            <GridItem
-              cancel=""
-              className=""
-              cols={2}
-              containerPadding={
-                Array [
-                  10,
-                  10,
-                ]
-              }
-              containerWidth={0}
-              h={2}
-              handle=""
-              i="18"
-              isBounded={false}
-              isDraggable={true}
-              isResizable={true}
-              key=".$18"
-              margin={
-                Array [
-                  10,
-                  10,
-                ]
-              }
-              maxH={Infinity}
-              maxRows={Infinity}
-              maxW={Infinity}
-              minH={1}
-              minW={1}
-              onDrag={[Function]}
-              onDragStart={[Function]}
-              onDragStop={[Function]}
-              onResize={[Function]}
-              onResizeStart={[Function]}
-              onResizeStop={[Function]}
-              resizeHandles={
-                Array [
-                  "se",
-                ]
-              }
-              rowHeight={30}
-              static={false}
-              transformScale={1}
-              useCSSTransforms={true}
-              usePercentages={false}
-              w={2}
-              x={0}
-              y={55}
-            >
-              <DraggableCore
-                allowAnyClick={false}
-                cancel=".react-resizable-handle"
-                disabled={false}
-                enableUserSelectHack={true}
-                grid={null}
-                handle=""
-                offsetParent={null}
-                onDrag={[Function]}
-                onMouseDown={[Function]}
-                onStart={[Function]}
-                onStop={[Function]}
-                scale={1}
-                transform={null}
-              >
-                <Resizable
-                  axis="both"
-                  draggableOpts={
-                    Object {
-                      "disabled": false,
-                    }
-                  }
-                  handleSize={
-                    Array [
-                      20,
-                      20,
-                    ]
-                  }
-                  height={70}
-                  lockAspectRatio={false}
-                  maxConstraints={
-                    Array [
-                      -20,
-                      Infinity,
-                    ]
-                  }
-                  minConstraints={
-                    Array [
-                      -15,
-                      30,
-                    ]
-                  }
-                  onMouseDown={[Function]}
-                  onMouseUp={[Function]}
-                  onResize={[Function]}
-                  onResizeStart={[Function]}
-                  onResizeStop={[Function]}
-                  onTouchEnd={[Function]}
-                  resizeHandles={
-                    Array [
-                      "se",
-                    ]
-                  }
-                  transformScale={1}
-                  width={-20}
-                >
-                  <div
-                    className="react-grid-item react-draggable cssTransforms react-resizable"
-                    key="18"
-                    onMouseDown={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchEnd={[Function]}
-                    style={
-                      Object {
-                        "MozTransform": "translate(10px,2210px)",
-                        "OTransform": "translate(10px,2210px)",
-                        "WebkitTransform": "translate(10px,2210px)",
-                        "height": "70px",
-                        "msTransform": "translate(10px,2210px)",
-                        "position": "absolute",
-                        "transform": "translate(10px,2210px)",
-                        "width": "-20px",
-                      }
-                    }
-                  >
-                    <span
-                      className="text"
-                    >
-                      18
-                    </span>
-                    <DraggableCore
-                      allowAnyClick={false}
-                      cancel={null}
-                      disabled={false}
-                      enableUserSelectHack={true}
-                      grid={null}
-                      handle={null}
-                      key="resizableHandle-se"
-                      offsetParent={null}
-                      onDrag={[Function]}
-                      onMouseDown={[Function]}
-                      onStart={[Function]}
-                      onStop={[Function]}
-                      scale={1}
-                      transform={null}
-                    >
-                      <span
-                        className="react-resizable-handle react-resizable-handle-se"
-                        onMouseDown={[Function]}
-                        onMouseUp={[Function]}
-                        onTouchEnd={[Function]}
-                      />
-                    </DraggableCore>
-                  </div>
-                </Resizable>
-              </DraggableCore>
-            </GridItem>
-            <GridItem
-              cancel=""
-              className=""
-              cols={2}
-              containerPadding={
-                Array [
-                  10,
-                  10,
-                ]
-              }
-              containerWidth={0}
-              h={3}
-              handle=""
-              i="19"
-              isBounded={false}
-              isDraggable={true}
-              isResizable={true}
-              key=".$19"
-              margin={
-                Array [
-                  10,
-                  10,
-                ]
-              }
-              maxH={Infinity}
-              maxRows={Infinity}
-              maxW={Infinity}
-              minH={1}
-              minW={1}
-              onDrag={[Function]}
-              onDragStart={[Function]}
-              onDragStop={[Function]}
-              onResize={[Function]}
-              onResizeStart={[Function]}
-              onResizeStop={[Function]}
-              resizeHandles={
-                Array [
-                  "se",
-                ]
-              }
-              rowHeight={30}
-              static={false}
-              transformScale={1}
-              useCSSTransforms={true}
-              usePercentages={false}
-              w={2}
-              x={0}
-              y={63}
-            >
-              <DraggableCore
-                allowAnyClick={false}
-                cancel=".react-resizable-handle"
-                disabled={false}
-                enableUserSelectHack={true}
-                grid={null}
-                handle=""
-                offsetParent={null}
-                onDrag={[Function]}
-                onMouseDown={[Function]}
-                onStart={[Function]}
-                onStop={[Function]}
-                scale={1}
-                transform={null}
-              >
-                <Resizable
-                  axis="both"
-                  draggableOpts={
-                    Object {
-                      "disabled": false,
-                    }
-                  }
-                  handleSize={
-                    Array [
-                      20,
-                      20,
-                    ]
-                  }
-                  height={110}
-                  lockAspectRatio={false}
-                  maxConstraints={
-                    Array [
-                      -20,
-                      Infinity,
-                    ]
-                  }
-                  minConstraints={
-                    Array [
-                      -15,
-                      30,
-                    ]
-                  }
-                  onMouseDown={[Function]}
-                  onMouseUp={[Function]}
-                  onResize={[Function]}
-                  onResizeStart={[Function]}
-                  onResizeStop={[Function]}
-                  onTouchEnd={[Function]}
-                  resizeHandles={
-                    Array [
-                      "se",
-                    ]
-                  }
-                  transformScale={1}
-                  width={-20}
-                >
-                  <div
-                    className="react-grid-item react-draggable cssTransforms react-resizable"
-                    key="19"
-                    onMouseDown={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchEnd={[Function]}
-                    style={
-                      Object {
-                        "MozTransform": "translate(10px,2530px)",
-                        "OTransform": "translate(10px,2530px)",
-                        "WebkitTransform": "translate(10px,2530px)",
-                        "height": "110px",
-                        "msTransform": "translate(10px,2530px)",
-                        "position": "absolute",
-                        "transform": "translate(10px,2530px)",
-                        "width": "-20px",
-                      }
-                    }
-                  >
-                    <span
-                      className="text"
-                    >
-                      19
-                    </span>
-                    <DraggableCore
-                      allowAnyClick={false}
-                      cancel={null}
-                      disabled={false}
-                      enableUserSelectHack={true}
-                      grid={null}
-                      handle={null}
-                      key="resizableHandle-se"
-                      offsetParent={null}
-                      onDrag={[Function]}
-                      onMouseDown={[Function]}
-                      onStart={[Function]}
-                      onStop={[Function]}
-                      scale={1}
-                      transform={null}
-                    >
-                      <span
-                        className="react-resizable-handle react-resizable-handle-se"
-                        onMouseDown={[Function]}
-                        onMouseUp={[Function]}
-                        onTouchEnd={[Function]}
-                      />
-                    </DraggableCore>
-                  </div>
-                </Resizable>
-              </DraggableCore>
-            </GridItem>
-            <GridItem
-              cancel=""
-              className=""
-              cols={2}
-              containerPadding={
-                Array [
-                  10,
-                  10,
-                ]
-              }
-              containerWidth={0}
-              h={4}
-              handle=""
-              i="20"
-              isBounded={false}
-              isDraggable={true}
-              isResizable={true}
-              key=".$20"
-              margin={
-                Array [
-                  10,
-                  10,
-                ]
-              }
-              maxH={Infinity}
-              maxRows={Infinity}
-              maxW={Infinity}
-              minH={1}
-              minW={1}
-              onDrag={[Function]}
-              onDragStart={[Function]}
-              onDragStop={[Function]}
-              onResize={[Function]}
-              onResizeStart={[Function]}
-              onResizeStop={[Function]}
-              resizeHandles={
-                Array [
-                  "se",
-                ]
-              }
-              rowHeight={30}
-              static={false}
-              transformScale={1}
-              useCSSTransforms={true}
-              usePercentages={false}
-              w={2}
-              x={0}
-              y={79}
-            >
-              <DraggableCore
-                allowAnyClick={false}
-                cancel=".react-resizable-handle"
-                disabled={false}
-                enableUserSelectHack={true}
-                grid={null}
-                handle=""
-                offsetParent={null}
-                onDrag={[Function]}
-                onMouseDown={[Function]}
-                onStart={[Function]}
-                onStop={[Function]}
-                scale={1}
-                transform={null}
-              >
-                <Resizable
-                  axis="both"
-                  draggableOpts={
-                    Object {
-                      "disabled": false,
-                    }
-                  }
-                  handleSize={
-                    Array [
-                      20,
-                      20,
-                    ]
-                  }
-                  height={150}
-                  lockAspectRatio={false}
-                  maxConstraints={
-                    Array [
-                      -20,
-                      Infinity,
-                    ]
-                  }
-                  minConstraints={
-                    Array [
-                      -15,
-                      30,
-                    ]
-                  }
-                  onMouseDown={[Function]}
-                  onMouseUp={[Function]}
-                  onResize={[Function]}
-                  onResizeStart={[Function]}
-                  onResizeStop={[Function]}
-                  onTouchEnd={[Function]}
-                  resizeHandles={
-                    Array [
-                      "se",
-                    ]
-                  }
-                  transformScale={1}
-                  width={-20}
-                >
-                  <div
-                    className="react-grid-item react-draggable cssTransforms react-resizable"
-                    key="20"
-                    onMouseDown={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchEnd={[Function]}
-                    style={
-                      Object {
-                        "MozTransform": "translate(10px,3170px)",
-                        "OTransform": "translate(10px,3170px)",
-                        "WebkitTransform": "translate(10px,3170px)",
-                        "height": "150px",
-                        "msTransform": "translate(10px,3170px)",
-                        "position": "absolute",
-                        "transform": "translate(10px,3170px)",
-                        "width": "-20px",
-                      }
-                    }
-                  >
-                    <span
-                      className="text"
-                    >
-                      20
-                    </span>
-                    <DraggableCore
-                      allowAnyClick={false}
-                      cancel={null}
-                      disabled={false}
-                      enableUserSelectHack={true}
-                      grid={null}
-                      handle={null}
-                      key="resizableHandle-se"
-                      offsetParent={null}
-                      onDrag={[Function]}
-                      onMouseDown={[Function]}
-                      onStart={[Function]}
-                      onStop={[Function]}
-                      scale={1}
-                      transform={null}
-                    >
-                      <span
-                        className="react-resizable-handle react-resizable-handle-se"
-                        onMouseDown={[Function]}
-                        onMouseUp={[Function]}
-                        onTouchEnd={[Function]}
-                      />
-                    </DraggableCore>
-                  </div>
-                </Resizable>
-              </DraggableCore>
-            </GridItem>
-            <GridItem
-              cancel=""
-              className=""
-              cols={2}
-              containerPadding={
-                Array [
-                  10,
-                  10,
-                ]
-              }
-              containerWidth={0}
-              h={5}
-              handle=""
-              i="21"
-              isBounded={false}
-              isDraggable={false}
-              isResizable={false}
-              key=".$21"
-              margin={
-                Array [
-                  10,
-                  10,
-                ]
-              }
-              maxH={Infinity}
-              maxRows={Infinity}
-              maxW={Infinity}
-              minH={1}
-              minW={1}
-              onDrag={[Function]}
-              onDragStart={[Function]}
-              onDragStop={[Function]}
-              onResize={[Function]}
-              onResizeStart={[Function]}
-              onResizeStop={[Function]}
-              resizeHandles={
-                Array [
-                  "se",
-                ]
-              }
-              rowHeight={30}
-              static={true}
-              transformScale={1}
-              useCSSTransforms={true}
-              usePercentages={false}
-              w={2}
-              x={0}
-              y={16}
-            >
-              <DraggableCore
-                allowAnyClick={false}
-                cancel=".react-resizable-handle"
-                disabled={true}
-                enableUserSelectHack={true}
-                grid={null}
-                handle=""
-                offsetParent={null}
-                onDrag={[Function]}
-                onMouseDown={[Function]}
-                onStart={[Function]}
-                onStop={[Function]}
-                scale={1}
-                transform={null}
-              >
-                <Resizable
-                  axis="both"
-                  className="react-resizable-hide"
-                  draggableOpts={
-                    Object {
-                      "disabled": true,
-                    }
-                  }
-                  handleSize={
-                    Array [
-                      20,
-                      20,
-                    ]
-                  }
-                  height={190}
-                  lockAspectRatio={false}
-                  maxConstraints={
-                    Array [
-                      -20,
-                      Infinity,
-                    ]
-                  }
-                  minConstraints={
-                    Array [
-                      -15,
-                      30,
-                    ]
-                  }
-                  onMouseDown={[Function]}
-                  onMouseUp={[Function]}
-                  onResize={[Function]}
-                  onResizeStart={[Function]}
-                  onResizeStop={[Function]}
-                  onTouchEnd={[Function]}
-                  resizeHandles={
-                    Array [
-                      "se",
-                    ]
-                  }
-                  transformScale={1}
-                  width={-20}
-                >
-                  <div
-                    className="react-grid-item static static cssTransforms react-resizable-hide react-resizable"
-                    key="21"
-                    onMouseDown={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchEnd={[Function]}
-                    style={
-                      Object {
-                        "MozTransform": "translate(10px,650px)",
-                        "OTransform": "translate(10px,650px)",
-                        "WebkitTransform": "translate(10px,650px)",
-                        "height": "190px",
-                        "msTransform": "translate(10px,650px)",
-                        "position": "absolute",
-                        "transform": "translate(10px,650px)",
-                        "width": "-20px",
-                      }
-                    }
-                  >
-                    <span
-                      className="text"
-                      title="This item is static and cannot be removed or resized."
-                    >
-                      Static - 
-                      21
-                    </span>
-                    <DraggableCore
-                      allowAnyClick={false}
-                      cancel={null}
-                      disabled={true}
-                      enableUserSelectHack={true}
-                      grid={null}
-                      handle={null}
-                      key="resizableHandle-se"
-                      offsetParent={null}
-                      onDrag={[Function]}
-                      onMouseDown={[Function]}
-                      onStart={[Function]}
-                      onStop={[Function]}
-                      scale={1}
-                      transform={null}
-                    >
-                      <span
-                        className="react-resizable-handle react-resizable-handle-se"
-                        onMouseDown={[Function]}
-                        onMouseUp={[Function]}
-                        onTouchEnd={[Function]}
-                      />
-                    </DraggableCore>
-                  </div>
-                </Resizable>
-              </DraggableCore>
-            </GridItem>
-            <GridItem
-              cancel=""
-              className=""
-              cols={2}
-              containerPadding={
-                Array [
-                  10,
-                  10,
-                ]
-              }
-              containerWidth={0}
-              h={2}
-              handle=""
-              i="22"
-              isBounded={false}
-              isDraggable={true}
-              isResizable={true}
-              key=".$22"
-              margin={
-                Array [
-                  10,
-                  10,
-                ]
-              }
-              maxH={Infinity}
-              maxRows={Infinity}
-              maxW={Infinity}
-              minH={1}
-              minW={1}
-              onDrag={[Function]}
-              onDragStart={[Function]}
-              onDragStop={[Function]}
-              onResize={[Function]}
-              onResizeStart={[Function]}
-              onResizeStop={[Function]}
-              resizeHandles={
-                Array [
-                  "se",
-                ]
-              }
-              rowHeight={30}
-              static={false}
-              transformScale={1}
-              useCSSTransforms={true}
-              usePercentages={false}
-              w={2}
-              x={0}
-              y={57}
-            >
-              <DraggableCore
-                allowAnyClick={false}
-                cancel=".react-resizable-handle"
-                disabled={false}
-                enableUserSelectHack={true}
-                grid={null}
-                handle=""
-                offsetParent={null}
-                onDrag={[Function]}
-                onMouseDown={[Function]}
-                onStart={[Function]}
-                onStop={[Function]}
-                scale={1}
-                transform={null}
-              >
-                <Resizable
-                  axis="both"
-                  draggableOpts={
-                    Object {
-                      "disabled": false,
-                    }
-                  }
-                  handleSize={
-                    Array [
-                      20,
-                      20,
-                    ]
-                  }
-                  height={70}
-                  lockAspectRatio={false}
-                  maxConstraints={
-                    Array [
-                      -20,
-                      Infinity,
-                    ]
-                  }
-                  minConstraints={
-                    Array [
-                      -15,
-                      30,
-                    ]
-                  }
-                  onMouseDown={[Function]}
-                  onMouseUp={[Function]}
-                  onResize={[Function]}
-                  onResizeStart={[Function]}
-                  onResizeStop={[Function]}
-                  onTouchEnd={[Function]}
-                  resizeHandles={
-                    Array [
-                      "se",
-                    ]
-                  }
-                  transformScale={1}
-                  width={-20}
-                >
-                  <div
-                    className="react-grid-item react-draggable cssTransforms react-resizable"
-                    key="22"
-                    onMouseDown={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchEnd={[Function]}
-                    style={
-                      Object {
-                        "MozTransform": "translate(10px,2290px)",
-                        "OTransform": "translate(10px,2290px)",
-                        "WebkitTransform": "translate(10px,2290px)",
-                        "height": "70px",
-                        "msTransform": "translate(10px,2290px)",
-                        "position": "absolute",
-                        "transform": "translate(10px,2290px)",
-                        "width": "-20px",
-                      }
-                    }
-                  >
-                    <span
-                      className="text"
-                    >
-                      22
-                    </span>
-                    <DraggableCore
-                      allowAnyClick={false}
-                      cancel={null}
-                      disabled={false}
-                      enableUserSelectHack={true}
-                      grid={null}
-                      handle={null}
-                      key="resizableHandle-se"
-                      offsetParent={null}
-                      onDrag={[Function]}
-                      onMouseDown={[Function]}
-                      onStart={[Function]}
-                      onStop={[Function]}
-                      scale={1}
-                      transform={null}
-                    >
-                      <span
-                        className="react-resizable-handle react-resizable-handle-se"
-                        onMouseDown={[Function]}
-                        onMouseUp={[Function]}
-                        onTouchEnd={[Function]}
-                      />
-                    </DraggableCore>
-                  </div>
-                </Resizable>
-              </DraggableCore>
-            </GridItem>
-            <GridItem
-              cancel=""
-              className=""
-              cols={2}
-              containerPadding={
-                Array [
-                  10,
-                  10,
-                ]
-              }
-              containerWidth={0}
-              h={3}
-              handle=""
-              i="23"
-              isBounded={false}
-              isDraggable={true}
-              isResizable={true}
-              key=".$23"
-              margin={
-                Array [
-                  10,
-                  10,
-                ]
-              }
-              maxH={Infinity}
-              maxRows={Infinity}
-              maxW={Infinity}
-              minH={1}
-              minW={1}
-              onDrag={[Function]}
-              onDragStart={[Function]}
-              onDragStop={[Function]}
-              onResize={[Function]}
-              onResizeStart={[Function]}
-              onResizeStop={[Function]}
-              resizeHandles={
-                Array [
-                  "se",
-                ]
-              }
-              rowHeight={30}
-              static={false}
-              transformScale={1}
-              useCSSTransforms={true}
-              usePercentages={false}
-              w={2}
-              x={0}
-              y={66}
-            >
-              <DraggableCore
-                allowAnyClick={false}
-                cancel=".react-resizable-handle"
-                disabled={false}
-                enableUserSelectHack={true}
-                grid={null}
-                handle=""
-                offsetParent={null}
-                onDrag={[Function]}
-                onMouseDown={[Function]}
-                onStart={[Function]}
-                onStop={[Function]}
-                scale={1}
-                transform={null}
-              >
-                <Resizable
-                  axis="both"
-                  draggableOpts={
-                    Object {
-                      "disabled": false,
-                    }
-                  }
-                  handleSize={
-                    Array [
-                      20,
-                      20,
-                    ]
-                  }
-                  height={110}
-                  lockAspectRatio={false}
-                  maxConstraints={
-                    Array [
-                      -20,
-                      Infinity,
-                    ]
-                  }
-                  minConstraints={
-                    Array [
-                      -15,
-                      30,
-                    ]
-                  }
-                  onMouseDown={[Function]}
-                  onMouseUp={[Function]}
-                  onResize={[Function]}
-                  onResizeStart={[Function]}
-                  onResizeStop={[Function]}
-                  onTouchEnd={[Function]}
-                  resizeHandles={
-                    Array [
-                      "se",
-                    ]
-                  }
-                  transformScale={1}
-                  width={-20}
-                >
-                  <div
-                    className="react-grid-item react-draggable cssTransforms react-resizable"
-                    key="23"
-                    onMouseDown={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchEnd={[Function]}
-                    style={
-                      Object {
-                        "MozTransform": "translate(10px,2650px)",
-                        "OTransform": "translate(10px,2650px)",
-                        "WebkitTransform": "translate(10px,2650px)",
-                        "height": "110px",
-                        "msTransform": "translate(10px,2650px)",
-                        "position": "absolute",
-                        "transform": "translate(10px,2650px)",
-                        "width": "-20px",
-                      }
-                    }
-                  >
-                    <span
-                      className="text"
-                    >
-                      23
-                    </span>
-                    <DraggableCore
-                      allowAnyClick={false}
-                      cancel={null}
-                      disabled={false}
-                      enableUserSelectHack={true}
-                      grid={null}
-                      handle={null}
-                      key="resizableHandle-se"
-                      offsetParent={null}
-                      onDrag={[Function]}
-                      onMouseDown={[Function]}
-                      onStart={[Function]}
-                      onStop={[Function]}
-                      scale={1}
-                      transform={null}
-                    >
-                      <span
-                        className="react-resizable-handle react-resizable-handle-se"
-                        onMouseDown={[Function]}
-                        onMouseUp={[Function]}
-                        onTouchEnd={[Function]}
-                      />
-                    </DraggableCore>
-                  </div>
-                </Resizable>
-              </DraggableCore>
-            </GridItem>
-            <GridItem
-              cancel=""
-              className=""
-              cols={2}
-              containerPadding={
-                Array [
-                  10,
-                  10,
-                ]
-              }
-              containerWidth={0}
-              h={4}
-              handle=""
-              i="24"
-              isBounded={false}
-              isDraggable={true}
-              isResizable={true}
-              key=".$24"
-              margin={
-                Array [
-                  10,
-                  10,
-                ]
-              }
-              maxH={Infinity}
-              maxRows={Infinity}
-              maxW={Infinity}
-              minH={1}
-              minW={1}
-              onDrag={[Function]}
-              onDragStart={[Function]}
-              onDragStop={[Function]}
-              onResize={[Function]}
-              onResizeStart={[Function]}
-              onResizeStop={[Function]}
-              resizeHandles={
-                Array [
-                  "se",
-                ]
-              }
-              rowHeight={30}
-              static={false}
-              transformScale={1}
-              useCSSTransforms={true}
-              usePercentages={false}
-              w={2}
-              x={0}
-              y={83}
-            >
-              <DraggableCore
-                allowAnyClick={false}
-                cancel=".react-resizable-handle"
-                disabled={false}
-                enableUserSelectHack={true}
-                grid={null}
-                handle=""
-                offsetParent={null}
-                onDrag={[Function]}
-                onMouseDown={[Function]}
-                onStart={[Function]}
-                onStop={[Function]}
-                scale={1}
-                transform={null}
-              >
-                <Resizable
-                  axis="both"
-                  draggableOpts={
-                    Object {
-                      "disabled": false,
-                    }
-                  }
-                  handleSize={
-                    Array [
-                      20,
-                      20,
-                    ]
-                  }
-                  height={150}
-                  lockAspectRatio={false}
-                  maxConstraints={
-                    Array [
-                      -20,
-                      Infinity,
-                    ]
-                  }
-                  minConstraints={
-                    Array [
-                      -15,
-                      30,
-                    ]
-                  }
-                  onMouseDown={[Function]}
-                  onMouseUp={[Function]}
-                  onResize={[Function]}
-                  onResizeStart={[Function]}
-                  onResizeStop={[Function]}
-                  onTouchEnd={[Function]}
-                  resizeHandles={
-                    Array [
-                      "se",
-                    ]
-                  }
-                  transformScale={1}
-                  width={-20}
-                >
-                  <div
-                    className="react-grid-item react-draggable cssTransforms react-resizable"
-                    key="24"
-                    onMouseDown={[Function]}
-                    onMouseUp={[Function]}
-                    onTouchEnd={[Function]}
-                    style={
-                      Object {
-                        "MozTransform": "translate(10px,3330px)",
-                        "OTransform": "translate(10px,3330px)",
-                        "WebkitTransform": "translate(10px,3330px)",
-                        "height": "150px",
-                        "msTransform": "translate(10px,3330px)",
-                        "position": "absolute",
-                        "transform": "translate(10px,3330px)",
-                        "width": "-20px",
-                      }
-                    }
-                  >
-                    <span
-                      className="text"
-                    >
-                      24
                     </span>
                     <DraggableCore
                       allowAnyClick={false}

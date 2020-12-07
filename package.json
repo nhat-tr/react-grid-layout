@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "make lint",
-    "test": "make test",
+    "test": "make test-watch",
     "build": "make build",
     "build-example": "make build-example",
     "view-example": "make view-example",

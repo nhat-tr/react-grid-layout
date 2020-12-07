@@ -30,6 +30,9 @@ import type {
 
 import type { PositionParams } from "./calculateUtils";
 import type { ResizeHandles, ResizeHandle } from "./ReactGridLayoutPropTypes";
+import WidthProvider from "./components/WidthProvider";
+import ReactGridLayout from "./ReactGridLayout";
+import ResponsiveReactGridLayout from "./ResponsiveReactGridLayout";
 
 type PartialPosition = { top: number, left: number };
 type GridItemCallback<Data: GridDragEvent | GridResizeEvent> = (
@@ -48,6 +51,8 @@ type State = {
 type Props = {
   children: ReactElement<any>,
   cols: number,
+  isGridLayout?: boolean,
+  gridLayoutId?: string,
   containerWidth: number,
   margin: [number, number],
   containerPadding: [number, number],
@@ -99,6 +104,8 @@ export default class GridItem extends React.Component<Props, State> {
     children: PropTypes.element,
 
     // General grid attributes
+    isGridLayout: PropTypes.bool,
+    gridLayoutId: PropTypes.string,
     cols: PropTypes.number.isRequired,
     containerWidth: PropTypes.number.isRequired,
     rowHeight: PropTypes.number.isRequired,
@@ -614,8 +621,8 @@ export default class GridItem extends React.Component<Props, State> {
       h,
       this.state
     );
-    const child = React.Children.only(this.props.children);
 
+    const child = React.Children.only(this.props.children);
     // Create the child element. We clone the existing element but modify its className and style.
     let newChild = React.cloneElement(child, {
       className: classNames(
@@ -635,7 +642,8 @@ export default class GridItem extends React.Component<Props, State> {
       style: {
         ...this.props.style,
         ...child.props.style,
-        ...this.createStyle(pos)
+        ...this.createStyle(pos),
+        zIndex: this.props.gridLayoutId ? 1 : "auto"
       }
     });
 
@@ -644,7 +652,6 @@ export default class GridItem extends React.Component<Props, State> {
 
     // Draggable support. This is always on, except for with placeholders.
     newChild = this.mixinDraggable(newChild, isDraggable);
-
     return newChild;
   }
 }

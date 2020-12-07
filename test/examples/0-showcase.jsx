@@ -29,7 +29,7 @@ export default class ShowcaseLayout extends React.Component<Props, State> {
 
   state = {
     currentBreakpoint: "lg",
-    compactType: "vertical",
+    compactType: null,
     mounted: false,
     layouts: { lg: generateLayout() }
   };
@@ -39,18 +39,31 @@ export default class ShowcaseLayout extends React.Component<Props, State> {
   }
 
   generateDOM() {
-    return _.map(this.state.layouts.lg, function(l, i) {
+    return _.map(this.state.layouts.lg, (l, i) => {
+      const tail = l.gridLayoutId ? `${i} in grid ${l.gridLayoutId}`: i;
       return (
-        <div key={i} className={l.static ? "static" : ""}>
-          {l.static ? (
-            <span
-              className="text"
-              title="This item is static and cannot be removed or resized."
-            >
-              Static - {i}
-            </span>
+        <div id={i} key={i} className={l.static ? "static" : ""}>
+          {l.isGridLayout ? (
+            <ResponsiveReactGridLayout
+            name={i+""}
+            key={`g-${i}`}
+            {...this.props}
+
+            layout={[{i: 'c', x: 4, y: 0, w: 1, h: 2, gridLayoutId: i+""},{i: 'd', x: 6, y: 2, w: 1, h: 1, gridLayoutId: i+""}]}
+            onBreakpointChange={this.onBreakpointChange}
+            // WidthProvider option
+            measureBeforeMount={false}
+            // I like to have it animate on mount. If you don't, delete `useCSSTransforms` (it's default `true`)
+            // and set `measureBeforeMount={true}`.
+            useCSSTransforms={this.state.mounted}
+            compactType={this.state.compactType}
+            preventCollision={!this.state.compactType}
+          >
+            <div key="c"> <span className="text" >item-{tail}</span> </div>
+            <div key="d"> <span className="text" >item-{tail}</span> </div>
+          </ResponsiveReactGridLayout>
           ) : (
-            <span className="text">{i}</span>
+            <span className="text">{tail}</span>
           )}
         </div>
       );
@@ -75,6 +88,7 @@ export default class ShowcaseLayout extends React.Component<Props, State> {
   };
 
   onLayoutChange = (layout: Layout, layouts: {[string]: Layout}) => {
+    this.setState({layouts});
     this.props.onLayoutChange(layout, layouts);
   };
 
@@ -105,6 +119,7 @@ export default class ShowcaseLayout extends React.Component<Props, State> {
           Change Compaction Type
         </button>
         <ResponsiveReactGridLayout
+          key="mainn"
           {...this.props}
           layouts={this.state.layouts}
           onBreakpointChange={this.onBreakpointChange}
@@ -126,7 +141,7 @@ export default class ShowcaseLayout extends React.Component<Props, State> {
 }
 
 function generateLayout() {
-  return _.map(_.range(0, 25), function(item, i) {
+  return _.map(_.range(0, 3), function(item, i) {
     var y = Math.ceil(Math.random() * 4) + 1;
     return {
       x: Math.round(Math.random() * 5) * 2,
@@ -134,7 +149,7 @@ function generateLayout() {
       w: 2,
       h: y,
       i: i.toString(),
-      static: Math.random() < 0.05
+      isGridLayout: Math.random() < 0.2
     };
   });
 }
