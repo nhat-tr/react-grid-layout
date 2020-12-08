@@ -6,19 +6,18 @@ import WidthProvider from '../../lib/components/WidthProvider';
 import type {CompactType, Layout} from '../../lib/utils';
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
 
-type Props = {|
+type Props = {
   className: string,
   cols: {[string]: number},
   onLayoutChange: Function,
   rowHeight: number,
-|};
-type State = {|
+};
+type State = {
   currentBreakpoint: string,
   compactType: CompactType,
   mounted: boolean,
   layouts: {[string]: Layout},
-  disabledItems: {[string]: boolean}
-|};
+};
 
 export default class ShowcaseLayout extends React.Component<Props, State> {
   static defaultProps = {
@@ -41,9 +40,7 @@ export default class ShowcaseLayout extends React.Component<Props, State> {
   }
 
   generateDOM() {
-    const { disabledItems } = this.state;
-    return _.map(this.state.layouts.lg, (l, i) => {
-      const tail = l.gridLayoutId ? `${i} in grid ${l.gridLayoutId}`: i;
+    return _.map(this.state.layouts.lg, (l, i) => { const tail = l.gridLayoutId ? `${i} in grid ${l.gridLayoutId}`: i;
       return (
         <div id={i} key={i} className={l.static ? "static" : ""}>
           {l.isGridLayout ? (
@@ -77,13 +74,11 @@ export default class ShowcaseLayout extends React.Component<Props, State> {
 
   onActivateDrag = (i) => () =>{
     const newLayouts = this.state.layouts.lg.map(l => ({...l, isDraggable: l.i === i ? true : l.isDraggable}));
-    console.log('act', i, newLayouts)
     this.setState({ layouts: {lg: newLayouts }});
   }
 
   onDeactivateDrag = (i) => () =>{
     const newLayouts = this.state.layouts.lg.map(l => ({...l, isDraggable: l.i === i ? false : l.isDraggable}));
-    console.log('deact', i, newLayouts)
     this.setState({ layouts: {lg: newLayouts }});
   }
 
@@ -118,6 +113,10 @@ export default class ShowcaseLayout extends React.Component<Props, State> {
   onDrop = (elemParams: Object) => {
     alert(`Element parameters: ${JSON.stringify(elemParams)}`);
   };
+
+  onLayoutChange = (layout) => {
+    console.log('changed', layout)
+  }
 
   render() {
     // eslint-disable-next-line no-unused-vars
@@ -158,7 +157,7 @@ export default class ShowcaseLayout extends React.Component<Props, State> {
 }
 
 function generateLayout() {
-  return _.map(_.range(0, 10), function(item, i) {
+  return _.map(_.range(0, 10), function(_, i) {
     var y = Math.ceil(Math.random() * 4) + 1;
     return {
       x: Math.round(Math.random() * 5) * 2,

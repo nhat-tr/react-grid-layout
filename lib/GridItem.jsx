@@ -342,6 +342,7 @@ export default class GridItem extends React.Component<Props, State> {
     return (
       <DraggableCore
         disabled={!isDraggable}
+        onMouseDown={this.onMouseOver}
         onStart={this.onDragStart}
         onDrag={this.onDrag}
         onStop={this.onDragStop}
@@ -497,6 +498,7 @@ export default class GridItem extends React.Component<Props, State> {
 
     // Call callback with this data
     const { x, y } = calcXY(positionParams, top, left, w, h);
+
     return onDrag.call(this, i, x, y, {
       e,
       node,
@@ -664,7 +666,6 @@ export default class GridItem extends React.Component<Props, State> {
         ...this.createStyle(pos),
         zIndex: this.props.gridLayoutId ? 1 : "auto"
       },
-      onMouseOver: this.onMouseOver,
       onMouseLeave: this.onMouseLeave
     });
 
