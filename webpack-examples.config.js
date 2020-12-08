@@ -62,7 +62,7 @@ module.exports = {
 // Load all entry points
 const files = fs
   .readdirSync(__dirname + "/test/examples")
-  .filter(function(element, index, array) {
+  .filter(function (element, index, array) {
     return element.match(/^.+\.jsx$/);
   });
 
