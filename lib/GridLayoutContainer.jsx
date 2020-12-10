@@ -3,11 +3,10 @@ import React, { useState, useEffect } from "react";
 import ReactGridLayout from "./ReactGridLayout";
 import type { Layout } from "../lib/utils";
 import { type Props as GridLayoutProps } from "./ReactGridLayoutPropTypes";
+import { get } from "lodash";
 
 export type Props = GridLayoutProps & {
-  allLayouts: Layout,
-
-  onMoveItemBetweenGrids?: (i: string, fromG: string, toG: string) => void
+  allLayouts: Layout
 };
 
 export const ContainerContext = React.createContext<any>({});
@@ -16,27 +15,70 @@ export function GridLayoutContainer(props: Props) {
   const { children, layout, ...rest } = props;
 
   const [allGrids, setAllGrids] = useState({});
-  const [allChildren, setAllChildren] = useState([]);
-  const [allLayouts, setAllLayouts] = useState([]);
+  const [allChildren, setAllChildren] = useState(children);
+  const [allLayouts, setAllLayouts] = useState(layout);
   const [mainGridLayouts, setMainGridLayouts] = useState([]);
+  const [mainGridChildren, setMainGridChildren] = useState([]);
 
   const getLayoutForGrid = gridId => {
     const layouts = [];
     for (let i = 0; i < allLayouts.length; i++) {
-      const l = layout[i];
+      const l = allLayouts[i];
       if (l.gridLayoutId === gridId) layouts.push(l);
     }
-
     return layouts;
   };
 
   const getChildrenForGrid = gridId => {
-    const grids = [];
-    React.Children.forEach(children, child => {
-      if (child.props.grid == gridId) grids.push(child);
+    const gridsChildren = [];
+    React.Children.forEach(allChildren, child => {
+      if (child.props.grid === gridId) gridsChildren.push(child);
     });
-    return grids;
+    return gridsChildren;
   };
+
+  const getChild = id => {
+    let foundChild = null;
+    React.Children.forEach(allChildren, child => {
+      if (child.key === id) foundChild = child;
+    });
+    return foundChild;
+  };
+
+  const onLayoutsChanged = (layout: Layout, layouts: { [string]: Layout }) => {
+    const current = [...allLayouts];
+    const newLayouts = current.map(l => {
+      const found = layout.find(l1 => l1.i === l.i);
+      if (found) return found;
+      return l;
+    });
+    setAllLayouts(newLayouts);
+    console.log("newLayouts", newLayouts);
+    props.onLayoutChange(newLayouts);
+  };
+
+  const onActivateDrag = i => {
+    setAllLayouts(
+      allLayouts.map(l => ({
+        ...l,
+        isDraggable: l.i === i ? true : l.isDraggable
+      }))
+    );
+  };
+
+  const onDeactivateDrag = i => {
+    setAllLayouts(
+      allLayouts.map(l => ({
+        ...l,
+        isDraggable: l.i === i ? false : l.isDraggable
+      }))
+    );
+  };
+
+  useEffect(() => {
+    setMainGridLayouts(getLayoutForGrid("mainGrid"));
+    setMainGridChildren(getChildrenForGrid("mainGrid"));
+  }, [allLayouts]);
 
   useEffect(() => {
     const grids = {};
@@ -44,13 +86,16 @@ export function GridLayoutContainer(props: Props) {
     // init all grids instances
     React.Children.forEach(allChildren, child => {
       const mainChild = React.Children.only(child.props.children);
-      if (mainChild.displayName === "ReactGridLayout") {
+      if (mainChild.type.displayName === "ReactGridLayout") {
         const gridsLayout = getLayoutForGrid(child.key);
         const gridsDoms = getChildrenForGrid(child.key);
 
         const newOnlyChild = React.cloneElement(mainChild, {
           layout: gridsLayout,
-          children: [...mainChild.props.children, ...gridsDoms]
+          children: gridsDoms,
+          onLayoutChange: onLayoutsChanged,
+          activateDrag: () => onActivateDrag(child.key),
+          deactivateDrag: () => onDeactivateDrag(child.key)
         });
 
         grids[child.key] = React.cloneElement(child, {
@@ -60,55 +105,38 @@ export function GridLayoutContainer(props: Props) {
     });
 
     setAllGrids(grids);
-  }, []);
+  }, [allLayouts]);
 
-  useEffect(() => {
-    setAllChildren(children);
-    setAllLayouts(layout);
-    setMainGridLayouts(layout.filter(l => l.gridLayoutId === "mainGrid"));
-  }, []);
+  const onMoveItemBetweenGrids = (i: string, fromG: string, toG: string) => {
+    console.log("move", i, "from", fromG, "to", toG);
+    const child = getChild(i);
+    const newLayouts = allLayouts.map(l => {
+      if (l.i === i) return { ...l, gridLayoutId: toG };
+      return { ...l };
+    });
+    const newChildren = [];
+    React.Children.forEach(allChildren, child => {
+      if (child.key === i) {
+        console.log("clone", child);
+        newChildren.push(React.cloneElement(child, { grid: toG }));
+      } else {
+        newChildren.push(child);
+      }
+    });
+    setAllChildren(newChildren);
+    setAllLayouts(newLayouts);
+  };
 
   return (
-    <ContainerContext.Provider value={allGrids}>
-      <ReactGridLayout {...rest} id="mainGrid" layout={mainGridLayouts}>
-        {allGrids["mainGrid"]}
+    <ContainerContext.Provider value={{ allGrids, onMoveItemBetweenGrids }}>
+      <ReactGridLayout
+        {...rest}
+        id="mainGrid"
+        layout={mainGridLayouts}
+        onLayoutChange={onLayoutsChanged}
+      >
+        {mainGridChildren}
       </ReactGridLayout>
     </ContainerContext.Provider>
-  );
-}
-
-export function Test() {
-  return (
-    <GridLayoutContainer
-      className="layout"
-      rowHeight={30}
-      cols={30}
-      autoSize={true}
-      onLayoutChange={function () {}}
-      allLayouts={[]}
-      compactType={null}
-    >
-      <div key="a" grid="mainGrid">
-        <span className="test">a</span>
-      </div>
-      <div key="b" grid="mainGrid">
-        <span className="test">b</span>
-      </div>
-      <div key="grid-1" grid="mainGrid">
-        <ReactGridLayout
-          id="grid-1"
-          className="layout"
-          rowHeight={15}
-          cols={30}
-          width={300}
-        />
-      </div>
-      <div key="c" grid="grid-1">
-        <span className="test">c</span>
-      </div>
-      <div key="d" grid="grid-2">
-        <span className="test">d</span>
-      </div>
-    </GridLayoutContainer>
   );
 }

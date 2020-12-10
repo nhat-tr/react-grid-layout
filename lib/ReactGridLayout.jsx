@@ -59,6 +59,7 @@ type State = {
 
 import type { Props } from "./ReactGridLayoutPropTypes";
 import { has } from "lodash";
+import { ContainerContext } from "./GridLayoutContainer";
 
 // End Types
 
@@ -520,7 +521,8 @@ export default class ReactGridLayout extends React.Component<Props, State> {
    */
   processGridItem(
     child: ReactElement<any>,
-    isDroppingItem?: boolean
+    isDroppingItem?: boolean,
+    onMoveItemBetweenGrids?: (i: string, fromG: string, toG: string) => void
   ): ?ReactElement<any> {
     if (!child || !child.key) return;
     const l = getLayoutItem(this.state.layout, String(child.key));
@@ -561,31 +563,6 @@ export default class ReactGridLayout extends React.Component<Props, State> {
 
     // isBounded set on child if set on parent, and child is not explicitly false
     const bounded = draggable && isBounded && l.isBounded !== false;
-    let newChild = null;
-    if (l.isGridLayout) {
-      const onlyChild = React.Children.only(child.props.children);
-
-      const newLayouts = [...onlyChild.props.layout];
-      const newChilds = [];
-      for (let i = 0, len = this.state.removedLayout.length; i < len; i++) {
-        const layout = this.state.removedLayout[i];
-        if (
-          layout.gridLayoutId === child.key &&
-          newLayouts.findIndex(x => x.i === layout.i) === -1
-        ) {
-          newLayouts.push(layout);
-          const find = this.props.children.find(c => c.key === layout.i);
-          newChilds.push(React.Children.only(find));
-        }
-      }
-      if (newLayouts.length !== onlyChild.props.layout.length) {
-        const newOnlyChild = React.cloneElement(onlyChild, {
-          layout: newLayouts,
-          children: [...onlyChild.props.children, ...newChilds]
-        });
-        newChild = React.cloneElement(child, { children: newOnlyChild });
-      }
-    }
 
     return (
       <GridItem
@@ -626,8 +603,9 @@ export default class ReactGridLayout extends React.Component<Props, State> {
         resizeHandle={resizeHandle}
         activateDrag={this.props.activateDrag}
         deactivateDrag={this.props.deactivateDrag}
+        onMoveItemBetweenGrids={onMoveItemBetweenGrids}
       >
-        {newChild || child}
+        {child}
       </GridItem>
     );
   }
@@ -763,23 +741,35 @@ export default class ReactGridLayout extends React.Component<Props, State> {
     };
 
     return (
-      <div
-        ref={innerRef}
-        className={mergedClassName}
-        style={mergedStyle}
-        onDrop={isDroppable ? this.onDrop : noop}
-        onDragLeave={isDroppable ? this.onDragLeave : noop}
-        onDragEnter={isDroppable ? this.onDragEnter : noop}
-        onDragOver={isDroppable ? this.onDragOver : noop}
-      >
-        {React.Children.map(this.props.children, child =>
-          this.processGridItem(child)
-        )}
-        {isDroppable &&
-          this.state.droppingDOMNode &&
-          this.processGridItem(this.state.droppingDOMNode, true)}
-        {this.placeholder()}
-      </div>
+      <ContainerContext.Consumer>
+        {context => {
+          return (
+            <div
+              ref={innerRef}
+              className={mergedClassName}
+              style={mergedStyle}
+              onDrop={isDroppable ? this.onDrop : noop}
+              onDragLeave={isDroppable ? this.onDragLeave : noop}
+              onDragEnter={isDroppable ? this.onDragEnter : noop}
+              onDragOver={isDroppable ? this.onDragOver : noop}
+            >
+              {React.Children.map(this.props.children, child => {
+                return this.processGridItem(
+                  context && context.allGrids[child.key]
+                    ? context.allGrids[child.key]
+                    : child,
+                  null,
+                  context ? context.onMoveItemBetweenGrids : null
+                );
+              })}
+              {isDroppable &&
+                this.state.droppingDOMNode &&
+                this.processGridItem(this.state.droppingDOMNode, true)}
+              {this.placeholder()}
+            </div>
+          );
+        }}
+      </ContainerContext.Consumer>
     );
   }
 }
