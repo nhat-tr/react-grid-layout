@@ -44,7 +44,6 @@ import type { PositionParams } from "./calculateUtils";
 type State = {
   activeDrag: ?LayoutItem,
   layout: Layout,
-  removedLayout: Layout,
   mounted: boolean,
   oldDragItem: ?LayoutItem,
   oldLayout: ?Layout,
@@ -129,7 +128,6 @@ export default class ReactGridLayout extends React.Component<Props, State> {
       // Legacy support for verticalCompact: false
       compactType(this.props)
     ),
-    removedLayout: [],
     mounted: false,
     oldDragItem: null,
     oldLayout: null,
@@ -343,14 +341,11 @@ export default class ReactGridLayout extends React.Component<Props, State> {
 
     // Set state
     const newLayout = compact(layout, compactType(this.props), cols);
-    const containerLayout = getContainerGridLayout(layout, l);
-    console.log("stop", l, newLayout, containerLayout);
 
-    const { oldLayout, removedLayout } = this.state;
+    const { oldLayout } = this.state;
     this.setState({
       activeDrag: null,
       layout: newLayout,
-      removedLayout: containerLayout ? [...removedLayout, l] : removedLayout,
       oldDragItem: null,
       oldLayout: null
     });
@@ -449,15 +444,20 @@ export default class ReactGridLayout extends React.Component<Props, State> {
     });
   }
 
-  onResizeStop(i: string, w: number, h: number, { e, node }: GridResizeEvent) {
+  onResizeStop(i: string, w: number, h: number, re: GridResizeEvent) {
+    const { e, size, node } = re;
     const { layout, oldResizeItem } = this.state;
     const { cols } = this.props;
-    var l = getLayoutItem(layout, i);
+    const newItem = getLayoutItem(layout, i);
 
-    this.props.onResizeStop(layout, oldResizeItem, l, null, e, node);
+    this.props.onResizeStop(layout, oldResizeItem, newItem, null, e, node);
 
     // Set state
-    const newLayout = compact(layout, compactType(this.props), cols);
+    let newLayout = compact(layout, compactType(this.props), cols);
+    newLayout = newLayout.map(l => {
+      return l.i === i ? { ...l, width: size.width, height: size.height } : l;
+    });
+    console.log(newLayout);
     const { oldLayout } = this.state;
     this.setState({
       activeDrag: null,
@@ -526,7 +526,7 @@ export default class ReactGridLayout extends React.Component<Props, State> {
   ): ?ReactElement<any> {
     if (!child || !child.key) return;
     const l = getLayoutItem(this.state.layout, String(child.key));
-    if (!l || this.state.removedLayout.findIndex(x => x.i === l.i) !== -1) {
+    if (!l) {
       return null;
     }
     const {

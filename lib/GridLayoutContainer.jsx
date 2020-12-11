@@ -1,9 +1,10 @@
 // @flow
 import React, { useState, useEffect } from "react";
 import ReactGridLayout from "./ReactGridLayout";
-import type { Layout } from "../lib/utils";
+import type { Layout, GridResizeEvent } from "../lib/utils";
 import { type Props as GridLayoutProps } from "./ReactGridLayoutPropTypes";
 import { get } from "lodash";
+import isEqual from "lodash.isequal";
 
 export type Props = GridLayoutProps & {
   allLayouts: Layout
@@ -19,6 +20,15 @@ export function GridLayoutContainer(props: Props) {
   const [allLayouts, setAllLayouts] = useState(layout);
   const [mainGridLayouts, setMainGridLayouts] = useState([]);
   const [mainGridChildren, setMainGridChildren] = useState([]);
+
+  const getLayoutItem = key => {
+    for (let i = 0; i < allLayouts.length; i++) {
+      const l = allLayouts[i];
+
+      if (l.i === key) return l;
+    }
+    return null;
+  };
 
   const getLayoutForGrid = gridId => {
     const layouts = [];
@@ -52,27 +62,11 @@ export function GridLayoutContainer(props: Props) {
       if (found) return found;
       return l;
     });
-    setAllLayouts(newLayouts);
-    console.log("newLayouts", newLayouts);
-    props.onLayoutChange(newLayouts);
-  };
-
-  const onActivateDrag = i => {
-    setAllLayouts(
-      allLayouts.map(l => ({
-        ...l,
-        isDraggable: l.i === i ? true : l.isDraggable
-      }))
-    );
-  };
-
-  const onDeactivateDrag = i => {
-    setAllLayouts(
-      allLayouts.map(l => ({
-        ...l,
-        isDraggable: l.i === i ? false : l.isDraggable
-      }))
-    );
+    if (!isEqual(allLayouts, newLayouts)) {
+      console.log("newLayouts", ...newLayouts);
+      setAllLayouts(newLayouts);
+      props.onLayoutChange(newLayouts);
+    }
   };
 
   useEffect(() => {
@@ -81,6 +75,7 @@ export function GridLayoutContainer(props: Props) {
   }, [allLayouts]);
 
   useEffect(() => {
+    console.log("effect2");
     const grids = {};
 
     // init all grids instances
@@ -89,13 +84,13 @@ export function GridLayoutContainer(props: Props) {
       if (mainChild.type.displayName === "ReactGridLayout") {
         const gridsLayout = getLayoutForGrid(child.key);
         const gridsDoms = getChildrenForGrid(child.key);
+        const layoutItem = getLayoutItem(child.key);
 
         const newOnlyChild = React.cloneElement(mainChild, {
           layout: gridsLayout,
           children: gridsDoms,
           onLayoutChange: onLayoutsChanged,
-          activateDrag: () => onActivateDrag(child.key),
-          deactivateDrag: () => onDeactivateDrag(child.key)
+          width: layoutItem?.width || mainChild.props.width
         });
 
         grids[child.key] = React.cloneElement(child, {
@@ -109,7 +104,6 @@ export function GridLayoutContainer(props: Props) {
 
   const onMoveItemBetweenGrids = (i: string, fromG: string, toG: string) => {
     console.log("move", i, "from", fromG, "to", toG);
-    const child = getChild(i);
     const newLayouts = allLayouts.map(l => {
       if (l.i === i) return { ...l, gridLayoutId: toG };
       return { ...l };
@@ -123,8 +117,8 @@ export function GridLayoutContainer(props: Props) {
         newChildren.push(child);
       }
     });
-    setAllChildren(newChildren);
     setAllLayouts(newLayouts);
+    setAllChildren(newChildren);
   };
 
   return (

@@ -1,40 +1,33 @@
 // @flow
-import React from "react";
-import ReactDOM from "react-dom";
+import classNames from "classnames";
 import PropTypes from "prop-types";
+import React from "react";
+import type { Element as ReactElement, Node as ReactNode } from "react";
+import ReactDOM from "react-dom";
 import { DraggableCore } from "react-draggable";
 import { Resizable } from "react-resizable";
-import { fastPositionEqual, perc, setTopLeft, setTransform } from "./utils";
 import {
+  calcGridColWidth,
   calcGridItemPosition,
   calcGridItemWHPx,
-  calcGridColWidth,
-  calcXY,
   calcWH,
-  clamp,
-  isOutOfGrid
+  calcXY,
+  clamp
 } from "./calculateUtils";
+import type { PositionParams } from "./calculateUtils";
 import {
   resizeHandlesType,
   resizeHandleType
 } from "./ReactGridLayoutPropTypes";
-import classNames from "classnames";
-import type { Element as ReactElement, Node as ReactNode } from "react";
-
+import type { ResizeHandle, ResizeHandles } from "./ReactGridLayoutPropTypes";
+import { fastPositionEqual, perc, setTopLeft, setTransform } from "./utils";
 import type {
-  ReactDraggableCallbackData,
+  DroppingPosition,
   GridDragEvent,
   GridResizeEvent,
-  DroppingPosition,
-  Position
+  Position,
+  ReactDraggableCallbackData
 } from "./utils";
-
-import type { PositionParams } from "./calculateUtils";
-import type { ResizeHandles, ResizeHandle } from "./ReactGridLayoutPropTypes";
-import WidthProvider from "./components/WidthProvider";
-import ReactGridLayout from "./ReactGridLayout";
-import ResponsiveReactGridLayout from "./ResponsiveReactGridLayout";
-import { times } from "lodash";
 
 type PartialPosition = { top: number, left: number };
 type GridItemCallback<Data: GridDragEvent | GridResizeEvent> = (
@@ -424,6 +417,7 @@ export default class GridItem extends React.Component<Props, State> {
    * @param  {Object} callbackData  an object with node, delta and position information
    */
   onDragStart = (e: Event, { node }: ReactDraggableCallbackData) => {
+    e.stopPropagation();
     const { onDragStart } = this.props;
     if (!onDragStart) return;
 
@@ -612,7 +606,6 @@ export default class GridItem extends React.Component<Props, State> {
       x,
       y
     );
-
     // minW should be at least 1 (TODO propTypes validation?)
     minW = Math.max(minW, 1);
 
@@ -627,18 +620,6 @@ export default class GridItem extends React.Component<Props, State> {
 
     handler.call(this, i, w, h, { e, node, size });
   }
-  onMouseOver = e => {
-    const { deactivateDrag } = this.props;
-    if (!this.props.isGridLayout && deactivateDrag) {
-      deactivateDrag();
-    }
-  };
-  onMouseLeave = e => {
-    const { activateDrag } = this.props;
-    if (!this.props.isGridLayout && activateDrag) {
-      activateDrag();
-    }
-  };
 
   render(): ReactNode {
     const {
@@ -683,9 +664,7 @@ export default class GridItem extends React.Component<Props, State> {
         ...child.props.style,
         ...this.createStyle(pos),
         zIndex: this.props.gridLayoutId ? 1 : "auto"
-      },
-      onMouseOver: this.onMouseOver,
-      onMouseLeave: this.onMouseLeave
+      }
     });
 
     // Resizable support. This is usually on but the user can toggle it off.
