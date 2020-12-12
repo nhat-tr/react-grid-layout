@@ -48,6 +48,7 @@ export default class ShowcaseLayout extends React.Component<Props, State> {
             <ReactGridLayout
             id={i+""}
             {...this.props}
+            margin={[0,0]}
             cols={30}
             width={200}
             onBreakpointChange={this.onBreakpointChange}
@@ -62,16 +63,6 @@ export default class ShowcaseLayout extends React.Component<Props, State> {
         </div>
       );
     });
-  }
-
-  onActivateDrag = (i) => () =>{
-    const newLayouts = this.state.layouts.lg.map(l => ({...l, isDraggable: l.i === i ? true : l.isDraggable}));
-    this.setState({ layouts: {lg: newLayouts }});
-  }
-
-  onDeactivateDrag = (i) => () =>{
-    const newLayouts = this.state.layouts.lg.map(l => ({...l, isDraggable: l.i === i ? false : l.isDraggable}));
-    this.setState({ layouts: {lg: newLayouts }});
   }
 
   onBreakpointChange = (breakpoint: string) => {
@@ -107,6 +98,7 @@ export default class ShowcaseLayout extends React.Component<Props, State> {
   };
 
   render() {
+  console.log('base render', this.state.layouts?.lg);
     // eslint-disable-next-line no-unused-vars
     return (
       <div>
@@ -126,9 +118,10 @@ export default class ShowcaseLayout extends React.Component<Props, State> {
           {...this.props}
           layout={this.state.layouts?.lg || []}
           cols={30}
+          margin={[0,0]}
           width={window.innerWidth-10}
-          onBreakpointChange={this.onBreakpointChange}
           onLayoutChange={this.onLayoutChange}
+          onBreakpointChange={this.onBreakpointChange}
           onDrop={this.onDrop}
           useCSSTransforms={this.state.mounted}
           compactType={this.state.compactType}

@@ -87,10 +87,7 @@ type Props = {
   onDragStop?: GridItemCallback<GridDragEvent>,
   onResize?: GridItemCallback<GridResizeEvent>,
   onResizeStart?: GridItemCallback<GridResizeEvent>,
-  onResizeStop?: GridItemCallback<GridResizeEvent>,
-  activateDrag?: () => void,
-  deactivateDrag?: () => void,
-  onMoveItemBetweenGrids?: (i: string, fromG: string, toG: string) => void
+  onResizeStop?: GridItemCallback<GridResizeEvent>
 };
 
 /**
@@ -154,17 +151,12 @@ export default class GridItem extends React.Component<Props, State> {
     resizeHandle: resizeHandleType,
 
     // Functions
-    onMouseOver: PropTypes.func,
-    onMouseLeave: PropTypes.func,
     onDragStop: PropTypes.func,
     onDragStart: PropTypes.func,
     onDrag: PropTypes.func,
     onResizeStop: PropTypes.func,
     onResizeStart: PropTypes.func,
     onResize: PropTypes.func,
-    activateDrag: PropTypes.func,
-    deactivateDrag: PropTypes.func,
-    onMoveItemBetweenGrids: PropTypes.func,
 
     // Flags
     isDraggable: PropTypes.bool.isRequired,
@@ -494,22 +486,6 @@ export default class GridItem extends React.Component<Props, State> {
 
     // Call callback with this data
     const { x, y } = calcXY(positionParams, top, left, w, h);
-    const targetGrid = document
-      .elementsFromPoint(e.clientX, e.clientY)
-      .filter(
-        ele =>
-          ele.classList.contains("react-grid-layout") &&
-          ele.parentNode.id !== this.props.i
-      )
-      .map(grid => grid.parentNode.id)[0];
-
-    if (targetGrid && targetGrid !== this.props.gridLayoutId) {
-      this.props.onMoveItemBetweenGrids(
-        this.props.i,
-        this.props.gridLayoutId,
-        targetGrid
-      );
-    }
 
     return onDrag.call(this, i, x, y, {
       e,

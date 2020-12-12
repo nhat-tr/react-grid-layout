@@ -205,7 +205,7 @@ export default class ReactGridLayout extends React.Component<Props, State> {
       // NOTE: this is almost always unequal. Therefore the only way to get better performance
       // from SCU is if the user intentionally memoizes children. If they do, and they can
       // handle changes properly, performance will increase.
-      this.props.children !== nextProps.children ||
+      !childrenEqual(this.props.children, nextProps.children) ||
       !fastRGLPropsEqual(this.props, nextProps, isEqual) ||
       this.state.activeDrag !== nextState.activeDrag ||
       this.state.mounted !== nextState.mounted ||
@@ -345,24 +345,14 @@ export default class ReactGridLayout extends React.Component<Props, State> {
     const { oldLayout } = this.state;
     this.setState({
       activeDrag: null,
-      layout: newLayout,
+      layout: newLayout.filter(
+        nl => this.props.layout.findIndex(pl => pl.i === nl.i) !== -1
+      ),
       oldDragItem: null,
       oldLayout: null
     });
 
     this.onLayoutMaybeChanged(newLayout, oldLayout);
-  }
-
-  getChild(key: string) {
-    let grid;
-    React.Children.forEach(this.props.children, child => {
-      if (child.key === key) {
-        grid = child;
-        return;
-      }
-    });
-
-    return grid;
   }
 
   onLayoutMaybeChanged(newLayout: Layout, oldLayout: ?Layout) {
@@ -521,8 +511,7 @@ export default class ReactGridLayout extends React.Component<Props, State> {
    */
   processGridItem(
     child: ReactElement<any>,
-    isDroppingItem?: boolean,
-    onMoveItemBetweenGrids?: (i: string, fromG: string, toG: string) => void
+    isDroppingItem?: boolean
   ): ?ReactElement<any> {
     if (!child || !child.key) return;
     const l = getLayoutItem(this.state.layout, String(child.key));
@@ -601,9 +590,6 @@ export default class ReactGridLayout extends React.Component<Props, State> {
         droppingPosition={isDroppingItem ? droppingPosition : undefined}
         resizeHandles={resizeHandlesOptions}
         resizeHandle={resizeHandle}
-        activateDrag={this.props.activateDrag}
-        deactivateDrag={this.props.deactivateDrag}
-        onMoveItemBetweenGrids={onMoveItemBetweenGrids}
       >
         {child}
       </GridItem>
@@ -755,11 +741,9 @@ export default class ReactGridLayout extends React.Component<Props, State> {
             >
               {React.Children.map(this.props.children, child => {
                 return this.processGridItem(
-                  context && context.allGrids[child.key]
+                  context?.allGrids[child.key]
                     ? context.allGrids[child.key]
-                    : child,
-                  null,
-                  context ? context.onMoveItemBetweenGrids : null
+                    : child
                 );
               })}
               {isDroppable &&
