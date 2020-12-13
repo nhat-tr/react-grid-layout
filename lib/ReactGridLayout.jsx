@@ -137,6 +137,7 @@ export default class ReactGridLayout extends React.Component<Props, State> {
   };
 
   dragEnterCounter = 0;
+  onContextLayoutChanged = null;
 
   constructor(props: Props, context: any): void {
     super(props, context);
@@ -359,7 +360,8 @@ export default class ReactGridLayout extends React.Component<Props, State> {
     if (!oldLayout) oldLayout = this.state.layout;
 
     if (!isEqual(oldLayout, newLayout)) {
-      this.props.onLayoutChange(newLayout);
+      // this.props.onLayoutChange(newLayout);
+      this.onContextLayoutChanged(newLayout);
     }
   }
 
@@ -447,7 +449,6 @@ export default class ReactGridLayout extends React.Component<Props, State> {
     newLayout = newLayout.map(l => {
       return l.i === i ? { ...l, width: size.width, height: size.height } : l;
     });
-    console.log(newLayout);
     const { oldLayout } = this.state;
     this.setState({
       activeDrag: null,
@@ -729,6 +730,7 @@ export default class ReactGridLayout extends React.Component<Props, State> {
     return (
       <ContainerContext.Consumer>
         {context => {
+          this.onContextLayoutChanged = context.onContextLayoutChanged;
           return (
             <div
               ref={innerRef}

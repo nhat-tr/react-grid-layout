@@ -82,7 +82,7 @@ export default class ShowcaseLayout extends React.Component<Props, State> {
     this.setState({ compactType });
   };
 
-  onLayoutChange = (layout: Layout, layouts: {[string]: Layout}) => {
+  onLayoutChange = (layout: Layout) => {
     this.setState({layouts: {lg: layout}});
     this.props.onLayoutChange(layout, {lg: layout});
   };
@@ -98,24 +98,17 @@ export default class ShowcaseLayout extends React.Component<Props, State> {
   };
 
   render() {
-  console.log('base render', this.state.layouts?.lg);
     // eslint-disable-next-line no-unused-vars
     return (
       <div>
-        <div>
-          Current Breakpoint: {this.state.currentBreakpoint} (
-          {this.props.cols[this.state.currentBreakpoint]} columns)
-        </div>
-        <div>
-          Compaction type:{" "}
-          {_.capitalize(this.state.compactType) || "No Compaction"}
-        </div>
-        <button onClick={this.onNewLayout}>Generate New Layout</button>
+       <button onClick={this.onNewLayout}>Generate New Layout</button>
         <button onClick={this.onCompactTypeChange}>
           Change Compaction Type
         </button>
-        <GridLayoutContainer
+     <h1>second</h1>
+         <GridLayoutContainer
           {...this.props}
+      key="second"
           layout={this.state.layouts?.lg || []}
           cols={30}
           margin={[0,0]}
