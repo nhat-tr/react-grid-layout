@@ -99,6 +99,7 @@ export function GridLayoutContainer(props: Props) {
 
         const newOnlyChild = React.cloneElement(mainChild, {
           style: { ...mainChild.props.style, height: "100%" },
+          key: `grid-${child.key}`,
           isBounded: true,
           layout: gridsLayout,
           children: gridsDoms,

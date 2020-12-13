@@ -128,7 +128,7 @@ export default class ShowcaseLayout extends React.Component<Props, State> {
 }
 
 function generateLayout() {
-  return _.map(_.range(0, 10), function(item, i) {
+  return _.map(_.range(0, 10), function(i, index) {
     var y = Math.ceil(Math.random() * 4) + 1;
     return {
       x: Math.round(Math.random() * 5) * 2,
@@ -136,8 +136,8 @@ function generateLayout() {
       w: 2,
       h: y,
       i: i.toString(),
-      gridLayoutId: i < 6 || i=== 8 ? "mainGrid" : '8',
-      isGridLayout: i === 8,
+      gridLayoutId: i < 4 || i == 9 ? "mainGrid" :( i  ===  6  || i === 8 ? '9' : '8'),
+      isGridLayout: i === 8 || i === 9,
       isDraggable: true
     };
   });
