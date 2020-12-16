@@ -283,6 +283,7 @@ export default class ReactGridLayout extends React.Component<Props, State> {
       h: l.h,
       x: l.x,
       y: l.y,
+      gridLayoutId: l.gridLayoutId,
       placeholder: true,
       i: i
     };
@@ -423,6 +424,7 @@ export default class ReactGridLayout extends React.Component<Props, State> {
       h: l.h,
       x: l.x,
       y: l.y,
+      gridLayoutId: l.gridLayoutId,
       static: true,
       i: i
     };
@@ -486,6 +488,7 @@ export default class ReactGridLayout extends React.Component<Props, State> {
         x={activeDrag.x}
         y={activeDrag.y}
         i={activeDrag.i}
+        gridLayoutId={activeDrag.gridLayoutId}
         isGridLayout={activeDrag.isGridLayout}
         className="react-grid-placeholder"
         containerWidth={width}
@@ -516,7 +519,7 @@ export default class ReactGridLayout extends React.Component<Props, State> {
   ): ?ReactElement<any> {
     if (!child || !child.key) return;
     const l = getLayoutItem(this.state.layout, String(child.key));
-    if (!l) {
+    if (!l || !l.gridLayoutId) {
       return null;
     }
     const {
@@ -751,7 +754,6 @@ export default class ReactGridLayout extends React.Component<Props, State> {
               {isDroppable &&
                 this.state.droppingDOMNode &&
                 this.processGridItem(this.state.droppingDOMNode, true)}
-              {this.placeholder()}
             </div>
           );
         }}

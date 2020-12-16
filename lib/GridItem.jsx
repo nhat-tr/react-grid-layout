@@ -202,6 +202,7 @@ export default class GridItem extends React.Component<Props, State> {
   currentNode: HTMLElement;
 
   shouldComponentUpdate(nextProps: Props, nextState: State) {
+    // if (!this.props.gridLayoutId) return false;
     // We can't deeply compare children. If the developer memoizes them, we can
     // use this optimization.
     if (this.props.children !== nextProps.children) return true;
@@ -234,6 +235,9 @@ export default class GridItem extends React.Component<Props, State> {
   }
 
   componentDidUpdate(prevProps: Props) {
+    if (!this.props.gridLayoutId) {
+      console.log(this.props.gridLayoutId);
+    }
     this.moveDroppingItem(prevProps);
   }
 

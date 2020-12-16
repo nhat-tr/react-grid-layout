@@ -47,6 +47,7 @@ export default class ShowcaseLayout extends React.Component<Props, State> {
           {l.isGridLayout ? (
             <ReactGridLayout
             id={i+""}
+            gridLayoutId={l.gridLayoutId}
             {...this.props}
             margin={[0,0]}
             cols={30}
