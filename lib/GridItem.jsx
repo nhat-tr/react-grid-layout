@@ -407,6 +407,7 @@ export default class GridItem extends React.Component<Props, State> {
    * @param  {Object} callbackData  an object with node, delta and position information
    */
   onDragStart = (e: Event, { node }: ReactDraggableCallbackData) => {
+    e.stopPropagation();
     const { onDragStart } = this.props;
     if (!onDragStart) return;
 

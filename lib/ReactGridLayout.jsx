@@ -353,7 +353,7 @@ export default class ReactGridLayout extends React.Component<Props, State> {
     if (!oldLayout) oldLayout = this.state.layout;
 
     if (!isEqual(oldLayout, newLayout)) {
-      this.props.onLayoutChange(newLayout);
+      this.props.onLayoutChange(newLayout, this.props.width);
     }
   }
 

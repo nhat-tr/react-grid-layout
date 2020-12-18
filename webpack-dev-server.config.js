@@ -31,7 +31,7 @@ module.exports = {
       }
     })
   ],
-  devtool: "eval",
+  devtool: "eval-source-map",
   devServer: {
     publicPath: "/",
     compress: true,
