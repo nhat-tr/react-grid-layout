@@ -2,8 +2,6 @@
 import _ from "lodash";
 import React from "react";
 import RGL, { WidthProvider } from "react-grid-layout";
-import { SourceGridItem } from "../../lib/SourceGridItem";
-import { TargetGridItem } from "../../lib/TargetGridItem";
 import { NestedGridLayoutItem } from "./NestedGridLayout";
 
 const ReactGridLayout = WidthProvider(RGL);
@@ -24,45 +22,27 @@ export default class NestedGridLayouts extends React.PureComponent {
     const layout = this.generateLayout();
     this.state = { layout, containerWidth: null };
   }
-  onMouseOverHandler = i => e => {
-    this.setState({
-      layout: this.state.layout.map(l =>
-        l.i == i ? { ...l, isDraggable: false } : l
-      )
-    });
-  };
-  onMouseOutHandler = i => e => {
-    this.setState({
-      layout: this.state.layout.map(l =>
-        l.i == i ? { ...l, isDraggable: true } : l
-      )
-    });
-  };
-
   generateDOM() {
-    return _.map(_.range(this.props.items), i => {
-      if (i === 10) {
+    return this.state.layout.map(l => {
+      if (l.i === "10" || l.i === "11") {
         return (
-          <div key={i}>
+          <div key={l.i} id={l.i}>
             <NestedGridLayoutItem
+              id="nested"
               containerWidth={this.state.containerWidth}
               width={418}
-            />
+              layout={[{ i: "0", x: 0, y: 1, w: 5, h: 5 }]}
+            >
+              <div key="0" id="0">
+                <span className="text">0</span>
+              </div>
+            </NestedGridLayoutItem>
           </div>
         );
       }
       return (
-        <div key={i}>
-          <SourceGridItem
-            id={i}
-            type="item"
-            containerId="main"
-            onMouseOverHandler={this.onMouseOverHandler(i)}
-            onMouseOutHandler={this.onMouseOutHandler(i)}
-          >
-            {" "}
-            <span className="text">{i}</span>
-          </SourceGridItem>
+        <div key={l.i} id={l.i}>
+          <span className="text">{l.i}</span>
         </div>
       );
     });
@@ -90,16 +70,15 @@ export default class NestedGridLayouts extends React.PureComponent {
 
   render() {
     return (
-      <TargetGridItem id="main">
-        <ReactGridLayout
-          {...this.props}
-          margin={[0, 0]}
-          layout={this.state.layout}
-          onLayoutChange={this.onLayoutChange}
-        >
-          {this.generateDOM()}
-        </ReactGridLayout>
-      </TargetGridItem>
+      <NestedGridLayoutItem
+        id="main"
+        {...this.props}
+        margin={[0, 0]}
+        layout={this.state.layout}
+        onLayoutChange={this.onLayoutChange}
+      >
+        {this.generateDOM()}
+      </NestedGridLayoutItem>
     );
   }
 }

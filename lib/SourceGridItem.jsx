@@ -7,21 +7,17 @@ export function SourceGridItem({
   type,
   containerId,
   children,
-  onMouseOverHandler,
-  onMouseOutHandler
+  onMouseEnter,
+  onMouseLeave,
+  w,
+  h
 }) {
   const [{ opacity }, drag, preview] = useDrag({
-    item: { id, type: "item", containerId },
+    item: { id, type, containerId, w, h },
     collect: monitor => ({
       opacity: monitor.isDragging() ? 0.4 : 1
     })
   });
-  const style = {
-    // border: "1px dashed gray",
-    // padding: "0.5rem 1rem",
-    // marginBottom: ".5rem",
-    // backgroundColor: "white"
-  };
   const handleStyle = {
     backgroundColor: "green",
     width: "1rem",
@@ -31,12 +27,12 @@ export function SourceGridItem({
     cursor: "move"
   };
   return (
-    <div ref={preview} style={{ ...style, opacity }}>
+    <div ref={preview} style={{ opacity }}>
       <div
         ref={drag}
         style={handleStyle}
-        onMouseOver={onMouseOverHandler}
-        onMouseOut={onMouseOutHandler}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
       />
       {children}
     </div>

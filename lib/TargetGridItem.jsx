@@ -8,8 +8,6 @@ import { useDrop } from "react-dnd";
 
 type Props = {
   children: ReactChildrenArray<ReactElement<any>>,
-  onMouseOver: (i: string) => (event: MouseEvent) => void,
-  onMouseOut: (i: string) => (event: MouseEvent) => void,
   onDrop: (item: any, offset: any) => void
 };
 
@@ -19,9 +17,11 @@ export function TargetGridItem(props: Props) {
     accept: ["item"],
     drop: (item, monitor) => {
       const currentRef = divRef.current;
-      if (props.onDrop && currentRef) {
+      const offset = monitor.getSourceClientOffset();
+      if (props.onDrop && currentRef && offset) {
+        console.log("target", props.id);
         const { top, left } = currentRef.getBoundingClientRect();
-        const { x, y } = monitor.getSourceClientOffset();
+        const { x, y } = offset;
         props.onDrop(item, {
           x: x - left,
           y: y - top,
@@ -40,11 +40,7 @@ export function TargetGridItem(props: Props) {
     }
   });
   return (
-    <div
-      ref={drop}
-      onMouseOver={props.onMouseOver}
-      onMouseOut={props.onMouseOut}
-    >
+    <div ref={drop}>
       <div ref={divRef}>{props.children}</div>
     </div>
   );
